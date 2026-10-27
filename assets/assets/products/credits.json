@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "arduino-uno",
+    "file": "arduino-uno.jpg",
+    "subject": "Arduino UNO Rev3 (genuine, three-quarter view, white background)",
+    "title": "File:Arduino uno r3 isometr.jpg",
+    "author": "MakeMagazinDE",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "share_alike": true,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Arduino_uno_r3_isometr.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Arduino_uno_r3_isometr.jpg",
+    "original_size": [
+      3053,
+      2427
+    ],
+    "output_size": [
+      1600,
+      1272
+    ],
+    "credit_line": "Photo: MakeMagazinDE, CC BY-SA 4.0, via Wikimedia Commons",
+    "notes": "Genuine Arduino UNO R3 (\"Made in Italy\"), three-quarter view on white. CC BY-SA: credit the author, link the licence, and if you edit the photo (crop, background removal) share the edited version under CC BY-SA 4.0 too.",
+    "modified": false
+  },
+  {
+    "slug": "esp32",
+    "file": "esp32.jpg",
+    "subject": "ESP32 DevKit-style board with ESP-WROOM-32 module",
+    "title": "File:ESP32 Espressif ESP-WROOM-32 Dev Board.jpg",
+    "author": "Ubahnverleih",
+    "licence": "CC0",
+    "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "attribution_required": false,
+    "share_alike": false,
+    "source_page": "https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Dev_Board.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/ESP32_Espressif_ESP-WROOM-32_Dev_Board.jpg",
+    "original_size": [
+      4082,
+      3134
+    ],
+    "output_size": [
+      1600,
+      1228
+    ],
+    "credit_line": "Photo: Ubahnverleih, CC0 (public domain), via Wikimedia Commons",
+    "notes": "ESP32 DevKit (DOIT-style 30-pin) board, ESP-WROOM-32 label clearly visible, on white. CC0, so no credit required; a credit is still given here as good practice.",
+    "modified": false
+  },
+  {
+    "slug": "bluetooth-car",
+    "file": "bluetooth-car.jpg",
+    "subject": "4WD Arduino Bluetooth car with yellow BO motors and HC-05 module",
+    "title": "File:Bluetooth Arduino Car.jpg",
+    "author": "shreyansh232",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "share_alike": true,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bluetooth_Arduino_Car.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bluetooth_Arduino_Car.jpg",
+    "original_size": [
+      4000,
+      1844
+    ],
+    "output_size": [
+      1600,
+      1200
+    ],
+    "credit_line": "Photo: shreyansh232, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "notes": "Arduino 4WD car with yellow BO gear motors and an HC-05 Bluetooth module on a wooden deck. Home-made build; the original was shot on a wood-textured surface and the photo cuts off the bottoms of the front wheels. CC BY-SA 4.0: credit and share-alike for edits.",
+    "modified": true,
+    "modifications": "Background removed (rembg isnet-general-use + u2net masks, closed-form alpha matting), floor area under the chassis removed, brown colour fringe on the tyre edges toned down, placed on pure white with an added soft contact shadow.",
+    "output_quality": 90,
+    "unmodified_backup": "originals/bluetooth-car.jpg",
+    "derivative_licence": "CC BY-SA 4.0",
+    "derivative_licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "derivative_note": "This edited version is shared under CC BY-SA 4.0, the same licence as the original."
+  },
+  {
+    "slug": "drone",
+    "file": "drone.jpg",
+    "subject": "DIY DJI F450 Flame Wheel quadcopter",
+    "title": "File:F450-DJI-Futaba.JPG",
+    "author": "Alexey M.",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "share_alike": true,
+    "source_page": "https://commons.wikimedia.org/wiki/File:F450-DJI-Futaba.JPG",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/F450-DJI-Futaba.JPG",
+    "original_size": [
+      1044,
+      610
+    ],
+    "output_size": [
+      1089,
+      817
+    ],
+    "credit_line": "Photo: Alexey M., CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "notes": "Assembled DJI F450 Flame Wheel quadcopter on grass. The original photo also showed a Futaba transmitter and a phone; both were removed in this edited version. Low resolution: the original is only 1044x610 px, so it was NOT upscaled to 1600 px. It looks soft if shown large. CC BY-SA 4.0.",
+    "modified": true,
+    "modifications": "Background (grass) removed with rembg isnet-general-use + alpha matting; the Futaba transmitter, its strap and the phone were removed so only the quadcopter remains; placed on pure white with added soft contact shadows under the landing-gear feet.",
+    "output_quality": 90,
+    "unmodified_backup": "originals/drone.jpg",
+    "derivative_licence": "CC BY-SA 4.0",
+    "derivative_licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "derivative_note": "This edited version is shared under CC BY-SA 4.0, the same licence as the original."
+  },
+  {
+    "slug": "object-detection-car",
+    "file": "object-detection-car.jpg",
+    "subject": "4WD obstacle-avoiding robot car with HC-SR04 ultrasonic sensor at the front",
+    "title": "File:Obstacle avoidance robot car.jpg",
+    "author": "Anani A. George",
+    "licence": "CC0",
+    "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "attribution_required": false,
+    "share_alike": false,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Obstacle_avoidance_robot_car.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Obstacle_avoidance_robot_car.jpg",
+    "original_size": [
+      4000,
+      3000
+    ],
+    "output_size": [
+      1600,
+      1200
+    ],
+    "credit_line": "Photo: Anani A. George, CC0 (public domain), via Wikimedia Commons (background removed)",
+    "notes": "4WD aluminium-chassis robot car with an HC-SR04 sensor on a front mast. The blurred person in the original background is gone in this edited version. CC0.",
+    "modified": true,
+    "modifications": "Background removed (rembg isnet-general-use + u2net masks, closed-form alpha matting), including the blurred person, chairs and table; placed on pure white with an added soft contact shadow.",
+    "output_quality": 90,
+    "unmodified_backup": "originals/object-detection-car.jpg"
+  }
+]
