@@ -1,0 +1,998 @@
+[
+  {
+    "slug": "raspberry-pi-5",
+    "name": "Raspberry Pi 5",
+    "category": "Boards & Controllers",
+    "image": "assets/products/raspberry-pi-5.jpg",
+    "imageCredit": "Photo: SimonWaldherr, CC BY 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A full desktop-class Linux computer the size of a credit card. Run Raspberry Pi OS, Python, a web server, a camera or an AI project, and control hardware through the 40-pin header.",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Broadcom BCM2712, quad-core 64-bit Arm Cortex-A76 @ 2.4 GHz"
+      },
+      {
+        "label": "GPU",
+        "value": "VideoCore VII (OpenGL ES 3.1, Vulkan 1.3)"
+      },
+      {
+        "label": "RAM",
+        "value": "1, 2, 4, 8 or 16 GB LPDDR4X (depending on model)"
+      },
+      {
+        "label": "Display",
+        "value": "2 × micro-HDMI, dual 4Kp60"
+      },
+      {
+        "label": "USB",
+        "value": "2 × USB 3.0, 2 × USB 2.0"
+      },
+      {
+        "label": "Networking",
+        "value": "Gigabit Ethernet, dual-band 802.11ac Wi-Fi, Bluetooth 5.0 / BLE"
+      },
+      {
+        "label": "Expansion",
+        "value": "40-pin GPIO header, PCIe 2.0 x1, 2 × MIPI camera/display"
+      },
+      {
+        "label": "Storage",
+        "value": "microSD (SDR104)"
+      },
+      {
+        "label": "Power",
+        "value": "5 V / 5 A via USB-C (Power Delivery)"
+      },
+      {
+        "label": "Extras",
+        "value": "Real-time clock, power button"
+      }
+    ],
+    "goodFor": [
+      "home servers",
+      "AI and camera projects",
+      "learning Linux and Python",
+      "media centres"
+    ],
+    "cardChips": [
+      "2.4 GHz quad-core",
+      "Wi-Fi + BT 5.0"
+    ],
+    "safetyNote": "Needs a good 5 V / 5 A USB-C supply; active cooling recommended under heavy load.",
+    "price": null
+  },
+  {
+    "slug": "raspberry-pi-4",
+    "name": "Raspberry Pi 4 Model B",
+    "category": "Boards & Controllers",
+    "image": "assets/products/raspberry-pi-4.jpg",
+    "imageCredit": "Photo: Laserlicht, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "The popular, proven Raspberry Pi. A small Linux computer with dual 4K display output, Gigabit Ethernet and USB 3.0 for robotics, IoT hubs and learning to code.",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Broadcom BCM2711, quad-core 64-bit Cortex-A72 @ 1.8 GHz"
+      },
+      {
+        "label": "RAM",
+        "value": "1, 2, 4 or 8 GB LPDDR4 (depending on model)"
+      },
+      {
+        "label": "Display",
+        "value": "2 × micro-HDMI (up to 4Kp60)"
+      },
+      {
+        "label": "USB",
+        "value": "2 × USB 3.0, 2 × USB 2.0"
+      },
+      {
+        "label": "Networking",
+        "value": "Gigabit Ethernet, dual-band 802.11ac Wi-Fi, Bluetooth 5.0 / BLE"
+      },
+      {
+        "label": "Expansion",
+        "value": "40-pin GPIO header, MIPI CSI camera and DSI display ports"
+      },
+      {
+        "label": "Storage",
+        "value": "microSD"
+      },
+      {
+        "label": "Power",
+        "value": "5 V DC via USB-C (minimum 3 A)"
+      },
+      {
+        "label": "Board size",
+        "value": "85.6 × 56.5 mm"
+      }
+    ],
+    "goodFor": [
+      "robotics",
+      "IoT hubs",
+      "retro gaming",
+      "school computer labs"
+    ],
+    "cardChips": [
+      "1.8 GHz quad-core",
+      "Wi-Fi + BT 5.0"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "raspberry-pi-pico",
+    "name": "Raspberry Pi Pico (RP2040)",
+    "category": "Boards & Controllers",
+    "image": "assets/products/raspberry-pi-pico.jpg",
+    "imageCredit": "Photo: Phiarc, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A tiny, low-cost microcontroller board from Raspberry Pi. Drag-and-drop programming over USB, with MicroPython or C/C++, and breadboard-friendly pins.",
+    "specs": [
+      {
+        "label": "Microcontroller",
+        "value": "RP2040, dual-core Arm Cortex-M0+ up to 133 MHz"
+      },
+      {
+        "label": "SRAM",
+        "value": "264 KB"
+      },
+      {
+        "label": "Flash",
+        "value": "2 MB QSPI"
+      },
+      {
+        "label": "GPIO",
+        "value": "26 multi-function 3.3 V pins (3 analog inputs)"
+      },
+      {
+        "label": "Interfaces",
+        "value": "2 × UART, 2 × SPI, 2 × I2C, 16 PWM channels, 8 PIO state machines"
+      },
+      {
+        "label": "USB",
+        "value": "Micro-USB (USB 1.1 device/host)"
+      },
+      {
+        "label": "Input voltage",
+        "value": "1.8–5.5 V DC"
+      },
+      {
+        "label": "Size",
+        "value": "51 × 21 mm"
+      }
+    ],
+    "goodFor": [
+      "MicroPython learning",
+      "LED and sensor projects",
+      "custom USB devices",
+      "low-power builds"
+    ],
+    "cardChips": [
+      "133 MHz dual-core",
+      "264 KB SRAM"
+    ],
+    "safetyNote": "3.3 V logic: don't connect 5 V signals directly.",
+    "price": null
+  },
+  {
+    "slug": "arduino-nano",
+    "name": "Arduino Nano",
+    "category": "Boards & Controllers",
+    "image": "assets/products/arduino-nano.jpg",
+    "imageCredit": "Photo: MakeMagazinDE, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "All the power of an Arduino UNO in a tiny board that plugs straight into a breadboard. Same ATmega328P chip, same code, much smaller.",
+    "specs": [
+      {
+        "label": "Microcontroller",
+        "value": "ATmega328P"
+      },
+      {
+        "label": "Operating voltage",
+        "value": "5 V"
+      },
+      {
+        "label": "Input voltage (VIN)",
+        "value": "7–12 V"
+      },
+      {
+        "label": "Clock speed",
+        "value": "16 MHz"
+      },
+      {
+        "label": "Flash memory",
+        "value": "32 KB (2 KB used by bootloader)"
+      },
+      {
+        "label": "SRAM",
+        "value": "2 KB"
+      },
+      {
+        "label": "EEPROM",
+        "value": "1 KB"
+      },
+      {
+        "label": "Digital I/O pins",
+        "value": "14 (6 PWM)"
+      },
+      {
+        "label": "Analog input pins",
+        "value": "8"
+      },
+      {
+        "label": "USB",
+        "value": "Mini-USB"
+      },
+      {
+        "label": "Size",
+        "value": "18 × 45 mm"
+      }
+    ],
+    "goodFor": [
+      "compact projects",
+      "wearables",
+      "breadboard prototyping",
+      "small robots"
+    ],
+    "cardChips": [
+      "16 MHz",
+      "Breadboard-friendly"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "nodemcu-esp8266",
+    "name": "NodeMCU ESP8266 (LoLin V3)",
+    "category": "Boards & Controllers",
+    "image": "assets/products/nodemcu-esp8266.jpg",
+    "imageCredit": "Photo: Raimond Spekking, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A cheap Wi-Fi development board for IoT. Program it like an Arduino and connect sensors to your phone, a web dashboard or the cloud.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "ESP8266EX, 32-bit Tensilica L106, 80 MHz (up to 160 MHz)"
+      },
+      {
+        "label": "Wireless",
+        "value": "Wi-Fi 802.11 b/g/n, 2.4 GHz"
+      },
+      {
+        "label": "Flash",
+        "value": "4 MB (typical)"
+      },
+      {
+        "label": "Logic level",
+        "value": "3.3 V (powered via USB 5 V)"
+      },
+      {
+        "label": "I/O",
+        "value": "Digital pins D0–D8 with PWM, I2C, SPI, UART; 1 analog input (A0)"
+      },
+      {
+        "label": "USB-serial",
+        "value": "CH340G, micro-USB"
+      },
+      {
+        "label": "Programming",
+        "value": "Arduino IDE, MicroPython, NodeMCU Lua"
+      }
+    ],
+    "goodFor": [
+      "IoT sensors",
+      "smart home switches",
+      "web dashboards",
+      "Wi-Fi learning"
+    ],
+    "cardChips": [
+      "Wi-Fi",
+      "80/160 MHz"
+    ],
+    "safetyNote": "3.3 V logic: don't connect 5 V signals directly.",
+    "price": null
+  },
+  {
+    "slug": "esp-01",
+    "name": "ESP-01 Wi-Fi Module (ESP8266)",
+    "category": "Wireless & Communication",
+    "image": "assets/products/esp-01.jpg",
+    "imageCredit": "Photo: Make Magazin DE, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A thumbnail-sized ESP8266 Wi-Fi module. Add Wi-Fi to an Arduino using AT commands, or program it directly for very small IoT gadgets.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "ESP8266EX"
+      },
+      {
+        "label": "Wireless",
+        "value": "Wi-Fi 802.11 b/g/n, 2.4 GHz, PCB antenna"
+      },
+      {
+        "label": "Flash",
+        "value": "1 MB (typical for the black ESP-01)"
+      },
+      {
+        "label": "Supply voltage",
+        "value": "3.3 V only"
+      },
+      {
+        "label": "Pins",
+        "value": "8 (VCC, GND, TX, RX, CH_EN, RST, GPIO0, GPIO2)"
+      },
+      {
+        "label": "Default firmware",
+        "value": "AT command set (serial UART)"
+      }
+    ],
+    "goodFor": [
+      "adding Wi-Fi to Arduino",
+      "tiny IoT nodes",
+      "Wi-Fi relays",
+      "learning AT commands"
+    ],
+    "cardChips": [
+      "Wi-Fi",
+      "8-pin"
+    ],
+    "safetyNote": "3.3 V only: powering it from 5 V will damage it. Use a 3.3 V regulator and level shifting.",
+    "price": null
+  },
+  {
+    "slug": "rfid-rc522",
+    "name": "RFID Reader Module RC522 (13.56 MHz)",
+    "category": "Wireless & Communication",
+    "image": "assets/products/rfid-rc522.jpg",
+    "imageCredit": "Photo: Giacomo Alessandroni, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Read and write contactless RFID cards and key tags. Build door locks, attendance systems and tap-to-start projects with an Arduino or ESP32.",
+    "specs": [
+      {
+        "label": "Controller",
+        "value": "NXP MFRC522"
+      },
+      {
+        "label": "Frequency",
+        "value": "13.56 MHz"
+      },
+      {
+        "label": "Supported cards",
+        "value": "ISO/IEC 14443 A / MIFARE (e.g. MIFARE Classic 1K)"
+      },
+      {
+        "label": "Interface",
+        "value": "SPI"
+      },
+      {
+        "label": "Supply voltage",
+        "value": "3.3 V"
+      },
+      {
+        "label": "Reading distance",
+        "value": "Up to about 5 cm (depends on card and antenna)"
+      }
+    ],
+    "goodFor": [
+      "RFID door locks",
+      "attendance systems",
+      "access control",
+      "interactive games"
+    ],
+    "cardChips": [
+      "13.56 MHz",
+      "SPI"
+    ],
+    "safetyNote": "Power from 3.3 V, not 5 V.",
+    "price": null
+  },
+  {
+    "slug": "hc-sr04",
+    "name": "HC-SR04 Ultrasonic Distance Sensor",
+    "category": "Sensors",
+    "image": "assets/products/hc-sr04.jpg",
+    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Measures distance with sound, like a bat. The go-to sensor for obstacle-avoiding robots, parking sensors and water-level meters.",
+    "specs": [
+      {
+        "label": "Supply voltage",
+        "value": "5 V DC"
+      },
+      {
+        "label": "Working current",
+        "value": "15 mA"
+      },
+      {
+        "label": "Range",
+        "value": "2 cm – 400 cm"
+      },
+      {
+        "label": "Resolution",
+        "value": "about 0.3 cm"
+      },
+      {
+        "label": "Measuring angle",
+        "value": "15°"
+      },
+      {
+        "label": "Ultrasonic frequency",
+        "value": "40 kHz"
+      },
+      {
+        "label": "Trigger input",
+        "value": "10 µs TTL pulse"
+      },
+      {
+        "label": "Pins",
+        "value": "VCC, Trig, Echo, GND"
+      },
+      {
+        "label": "Size",
+        "value": "45 × 20 × 15 mm"
+      }
+    ],
+    "goodFor": [
+      "obstacle-avoiding robots",
+      "parking sensors",
+      "water-level meters",
+      "distance measurement"
+    ],
+    "cardChips": [
+      "2–400 cm",
+      "5 V"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "dht11",
+    "name": "DHT11 Temperature & Humidity Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/dht11.jpg",
+    "imageCredit": "Photo: Edwiyanto, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A simple, low-cost digital sensor for room temperature and humidity. Perfect for a first weather station or plant monitor.",
+    "specs": [
+      {
+        "label": "Supply voltage",
+        "value": "3.3–5.5 V"
+      },
+      {
+        "label": "Temperature range",
+        "value": "0–50 °C (±2 °C)"
+      },
+      {
+        "label": "Humidity range",
+        "value": "20–90% RH (±5% RH)"
+      },
+      {
+        "label": "Sampling rate",
+        "value": "1 reading per second"
+      },
+      {
+        "label": "Output",
+        "value": "Single-wire digital"
+      },
+      {
+        "label": "Pins (module)",
+        "value": "+, OUT, −"
+      }
+    ],
+    "goodFor": [
+      "weather stations",
+      "room monitors",
+      "plant care",
+      "IoT dashboards"
+    ],
+    "cardChips": [
+      "0–50 °C",
+      "20–90% RH"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "dht22",
+    "name": "DHT22 (AM2302) Temperature & Humidity Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/dht22.jpg",
+    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "The more accurate big brother of the DHT11, with a wider range and 0.1-step readings. Great when you need reliable climate data.",
+    "specs": [
+      {
+        "label": "Supply voltage",
+        "value": "3.3–6 V"
+      },
+      {
+        "label": "Temperature range",
+        "value": "−40 to 80 °C (±0.5 °C)"
+      },
+      {
+        "label": "Humidity range",
+        "value": "0–100% RH (±2% RH typical)"
+      },
+      {
+        "label": "Resolution",
+        "value": "0.1 °C / 0.1% RH"
+      },
+      {
+        "label": "Sampling rate",
+        "value": "1 reading every 2 seconds"
+      },
+      {
+        "label": "Output",
+        "value": "Single-wire digital"
+      },
+      {
+        "label": "Pins (module)",
+        "value": "+, OUT, −"
+      }
+    ],
+    "goodFor": [
+      "accurate weather stations",
+      "greenhouses",
+      "data logging",
+      "smart thermostats"
+    ],
+    "cardChips": [
+      "−40–80 °C",
+      "±0.5 °C"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "pir-sensor",
+    "name": "PIR Motion Sensor (HC-SR501)",
+    "category": "Sensors",
+    "image": "assets/products/pir-sensor.jpg",
+    "imageCredit": "Photo: Nowforever, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Detects people moving by sensing body heat. Use it for automatic lights, burglar alarms and motion-triggered cameras.",
+    "specs": [
+      {
+        "label": "Supply voltage",
+        "value": "4.5–20 V DC"
+      },
+      {
+        "label": "Output",
+        "value": "Digital, 3.3 V high / 0 V low"
+      },
+      {
+        "label": "Detection range",
+        "value": "About 3–7 m (adjustable)"
+      },
+      {
+        "label": "Detection angle",
+        "value": "Up to about 120°"
+      },
+      {
+        "label": "Hold time",
+        "value": "Adjustable, about 5 s to 5 min"
+      },
+      {
+        "label": "Trigger modes",
+        "value": "Single (L) or repeat (H), jumper-selectable"
+      },
+      {
+        "label": "Quiescent current",
+        "value": "< 50 µA"
+      },
+      {
+        "label": "Board size",
+        "value": "32 × 24 mm"
+      }
+    ],
+    "goodFor": [
+      "automatic lights",
+      "security alarms",
+      "motion-triggered cameras",
+      "energy saving"
+    ],
+    "cardChips": [
+      "Up to 7 m",
+      "4.5–20 V"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "lcd-16x2",
+    "name": "16x2 Character LCD Display",
+    "category": "Displays",
+    "image": "assets/products/lcd-16x2.jpg",
+    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "summary": "The classic text display. Show sensor readings, menus and messages on 2 lines of 16 characters with the Arduino LiquidCrystal library.",
+    "specs": [
+      {
+        "label": "Display",
+        "value": "16 characters × 2 lines, 5 × 8 dot characters"
+      },
+      {
+        "label": "Controller",
+        "value": "HD44780-compatible"
+      },
+      {
+        "label": "Supply voltage",
+        "value": "5 V"
+      },
+      {
+        "label": "Interface",
+        "value": "Parallel, 4-bit or 8-bit mode (16-pin header)"
+      },
+      {
+        "label": "Backlight",
+        "value": "LED"
+      },
+      {
+        "label": "Contrast",
+        "value": "Set with a 10 kΩ potentiometer on pin V0"
+      }
+    ],
+    "goodFor": [
+      "sensor readouts",
+      "menus and clocks",
+      "school projects",
+      "status displays"
+    ],
+    "cardChips": [
+      "16 × 2 characters",
+      "HD44780"
+    ],
+    "safetyNote": "Tip: an I2C backpack (PCF8574) cuts the wiring down to 4 wires.",
+    "price": null
+  },
+  {
+    "slug": "sg90-servo",
+    "name": "SG90 Micro Servo Motor",
+    "category": "Motors & Actuators",
+    "image": "assets/products/sg90-servo.jpg",
+    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A tiny, light servo you can turn to an exact angle. Ideal for robot arms, sensor scanners, door latches and RC models.",
+    "specs": [
+      {
+        "label": "Weight",
+        "value": "9 g"
+      },
+      {
+        "label": "Operating voltage",
+        "value": "4.8–6 V"
+      },
+      {
+        "label": "Stall torque",
+        "value": "1.8 kg·cm (at 4.8 V)"
+      },
+      {
+        "label": "Speed",
+        "value": "0.1 s / 60° (at 4.8 V)"
+      },
+      {
+        "label": "Rotation",
+        "value": "About 180°"
+      },
+      {
+        "label": "Control signal",
+        "value": "PWM, 50 Hz (1–2 ms pulse)"
+      },
+      {
+        "label": "Wires",
+        "value": "Brown GND, red +V, orange signal"
+      },
+      {
+        "label": "Size",
+        "value": "22.2 × 11.8 × 31 mm"
+      }
+    ],
+    "goodFor": [
+      "robot arms",
+      "sensor scanning mounts",
+      "pan-tilt cameras",
+      "RC models"
+    ],
+    "cardChips": [
+      "9 g",
+      "180°"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "stepper-28byj48",
+    "name": "28BYJ-48 Stepper Motor + ULN2003 Driver",
+    "category": "Motors & Actuators",
+    "image": "assets/products/stepper-28byj48.jpg",
+    "imageCredit": "Photo: Kushagra Keshari, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "A geared stepper motor that moves in precise small steps, with a plug-in driver board. Great for clocks, turntables, blinds and small CNC ideas.",
+    "specs": [
+      {
+        "label": "Motor type",
+        "value": "5 V unipolar, 4-phase, 5-wire"
+      },
+      {
+        "label": "Gear ratio",
+        "value": "About 1:64"
+      },
+      {
+        "label": "Step angle",
+        "value": "5.625° / 64"
+      },
+      {
+        "label": "Steps per revolution",
+        "value": "About 2048 (full-step) or 4096 (half-step)"
+      },
+      {
+        "label": "Coil resistance",
+        "value": "50 Ω ±7%"
+      },
+      {
+        "label": "Driver",
+        "value": "ULN2003 Darlington array with 4 indicator LEDs"
+      },
+      {
+        "label": "Control inputs",
+        "value": "IN1–IN4 from any 4 digital pins"
+      }
+    ],
+    "goodFor": [
+      "clocks and turntables",
+      "automatic blinds",
+      "camera sliders",
+      "learning stepper control"
+    ],
+    "cardChips": [
+      "5 V",
+      "~2048 steps/rev"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "relay-module",
+    "name": "5 V Single-Channel Relay Module",
+    "category": "Motors & Actuators",
+    "image": "assets/products/relay-module.jpg",
+    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Lets a small Arduino signal switch a much bigger load, like a lamp, fan or pump, using an electrically isolated mechanical switch.",
+    "specs": [
+      {
+        "label": "Relay",
+        "value": "SRD-05VDC-SL-C"
+      },
+      {
+        "label": "Coil voltage",
+        "value": "5 V DC"
+      },
+      {
+        "label": "Contact rating",
+        "value": "10 A 250 V AC / 10 A 30 V DC"
+      },
+      {
+        "label": "Contacts",
+        "value": "NO, COM, NC screw terminals"
+      },
+      {
+        "label": "Control",
+        "value": "Digital signal from a microcontroller pin"
+      },
+      {
+        "label": "Channels",
+        "value": "1"
+      }
+    ],
+    "goodFor": [
+      "home automation",
+      "pump and fan control",
+      "smart switches",
+      "timers"
+    ],
+    "cardChips": [
+      "10 A",
+      "5 V coil"
+    ],
+    "safetyNote": "Mains voltage can kill. Only switch mains with proper insulation and adult supervision.",
+    "price": null
+  },
+  {
+    "slug": "tp4056",
+    "name": "TP4056 Li-ion Charger Module (with protection)",
+    "category": "Power",
+    "image": "assets/products/tp4056.jpg",
+    "imageCredit": "Photo: -stk, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Charge a single 3.7 V Li-ion or LiPo cell, like an 18650, from any USB charger. The built-in protection stops overcharge, deep discharge and short circuits.",
+    "specs": [
+      {
+        "label": "Charger IC",
+        "value": "TP4056 (CC/CV charging)"
+      },
+      {
+        "label": "Protection",
+        "value": "DW01A + 8205A MOSFET"
+      },
+      {
+        "label": "Input",
+        "value": "5 V via micro-USB or IN+/IN− pads"
+      },
+      {
+        "label": "Charge current",
+        "value": "1 A (set by onboard resistor)"
+      },
+      {
+        "label": "Full-charge voltage",
+        "value": "4.2 V ±1%"
+      },
+      {
+        "label": "Over-discharge cut-off",
+        "value": "About 2.4 V"
+      },
+      {
+        "label": "Over-current cut-off",
+        "value": "About 3 A"
+      },
+      {
+        "label": "Indicators",
+        "value": "Red LED charging, blue/green LED done"
+      },
+      {
+        "label": "Pads",
+        "value": "IN+, IN−, B+, B−, OUT+, OUT−"
+      }
+    ],
+    "goodFor": [
+      "battery-powered robots",
+      "rechargeable gadgets",
+      "18650 power packs",
+      "solar projects"
+    ],
+    "cardChips": [
+      "1 A charge",
+      "4.2 V"
+    ],
+    "safetyNote": "For one cell only (1S). Never leave charging Li-ion cells unattended.",
+    "price": null
+  },
+  {
+    "slug": "breadboard",
+    "name": "Half-Size Breadboard (400 points)",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/breadboard.jpg",
+    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "summary": "Build and change circuits without soldering. Push components and jumper wires into the holes and you're ready to test.",
+    "specs": [
+      {
+        "label": "Tie points",
+        "value": "400 (300 terminal + 100 power rail)"
+      },
+      {
+        "label": "Power rails",
+        "value": "2 pairs, marked red (+) and blue (−)"
+      },
+      {
+        "label": "Pitch",
+        "value": "2.54 mm (0.1 in)"
+      },
+      {
+        "label": "Type",
+        "value": "Solderless, reusable"
+      }
+    ],
+    "goodFor": [
+      "first circuits",
+      "testing sensors",
+      "school labs",
+      "quick prototypes"
+    ],
+    "cardChips": [
+      "400 tie points",
+      "Solderless"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "jumper-wires",
+    "name": "Female-to-Female Jumper Wires",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/jumper-wires.jpg",
+    "imageCredit": "Photo: Limor from New York City, USA, CC BY 2.0, via Wikimedia Commons (background removed)",
+    "summary": "Colour-coded wires with female sockets on both ends. Connect modules with pin headers, like sensors and drivers, straight to your board.",
+    "specs": [
+      {
+        "label": "Connector",
+        "value": "Female to female (Dupont-style)"
+      },
+      {
+        "label": "Fits",
+        "value": "Standard 2.54 mm (0.1 in) header pins"
+      },
+      {
+        "label": "Colours",
+        "value": "Multiple, for easy wiring"
+      }
+    ],
+    "goodFor": [
+      "sensor modules",
+      "Raspberry Pi GPIO",
+      "robot wiring",
+      "quick connections"
+    ],
+    "cardChips": [
+      "Female–Female",
+      "2.54 mm"
+    ],
+    "safetyNote": null,
+    "price": null
+  },
+  {
+    "slug": "leds",
+    "name": "5 mm Red LEDs",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/leds.jpg",
+    "imageCredit": "Photo: Nevit Dilmen, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "summary": "The first part of every electronics journey: blink an LED. Bright, cheap and perfect for indicators and learning.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "5 mm round, through-hole"
+      },
+      {
+        "label": "Colour",
+        "value": "Red"
+      },
+      {
+        "label": "Forward voltage",
+        "value": "About 1.8–2.2 V"
+      },
+      {
+        "label": "Typical current",
+        "value": "20 mA"
+      },
+      {
+        "label": "Polarity",
+        "value": "Long leg = anode (+), short leg = cathode (−)"
+      }
+    ],
+    "goodFor": [
+      "Blink sketch",
+      "status indicators",
+      "traffic-light projects",
+      "learning Ohm's law"
+    ],
+    "cardChips": [
+      "5 mm",
+      "~20 mA"
+    ],
+    "safetyNote": "Always use a series resistor (about 220–330 Ω at 5 V).",
+    "price": null
+  },
+  {
+    "slug": "potentiometer",
+    "name": "10 kΩ Rotary Potentiometer",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/potentiometer.jpg",
+    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "summary": "A knob you can turn to change a value. Read it on an analog pin to control brightness, speed, volume or a menu.",
+    "specs": [
+      {
+        "label": "Resistance",
+        "value": "10 kΩ"
+      },
+      {
+        "label": "Terminals",
+        "value": "3 (two ends + wiper)"
+      },
+      {
+        "label": "Mounting",
+        "value": "Panel mount with threaded bushing and nut"
+      },
+      {
+        "label": "Use",
+        "value": "Voltage divider into an analog input"
+      }
+    ],
+    "goodFor": [
+      "dimmers",
+      "motor speed control",
+      "volume knobs",
+      "LCD contrast"
+    ],
+    "cardChips": [
+      "10 kΩ",
+      "3 pins"
+    ],
+    "safetyNote": null,
+    "price": null
+  }
+]

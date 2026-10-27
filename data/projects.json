@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "bluetooth-car",
+    "name": "Bluetooth Car",
+    "image": "assets/products/bluetooth-car.jpg",
+    "imageCredit": "Photo: shreyansh232, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Build a small four-wheel rover and explore wireless control.",
+    "components": [
+      {
+        "label": "Arduino board",
+        "componentSlug": null
+      },
+      {
+        "label": "HC-05 Bluetooth module",
+        "componentSlug": null
+      },
+      {
+        "label": "L298N motor driver",
+        "componentSlug": null
+      },
+      {
+        "label": "BO gear motors",
+        "componentSlug": null
+      },
+      {
+        "label": "BO wheels ×4",
+        "componentSlug": "bo-wheel"
+      },
+      {
+        "label": "18650 Li-ion batteries ×2",
+        "componentSlug": "li-ion-18650-21700"
+      },
+      {
+        "label": "Jumper wires (set)",
+        "componentSlug": "jumper-wires"
+      }
+    ]
+  },
+  {
+    "slug": "drone",
+    "name": "Drone",
+    "image": "assets/products/drone.jpg",
+    "imageCredit": "Photo: Alexey M., CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "summary": "Explore a quadcopter build with flight control, motors, and a multi-cell power system.",
+    "components": [
+      {
+        "label": "LiPo balance charger",
+        "componentSlug": "lipo-balance-charger"
+      },
+      {
+        "label": "35A ESC (similar product)",
+        "componentSlug": null,
+        "similarSlug": "esc-35a"
+      },
+      {
+        "label": "3S 2200 mAh LiPo battery (similar product)",
+        "componentSlug": null,
+        "similarSlug": "lipo-3s-5200mah"
+      },
+      {
+        "label": "1000 KV drone motors",
+        "componentSlug": null
+      },
+      {
+        "label": "Flight controller",
+        "componentSlug": null
+      },
+      {
+        "label": "Frame and propellers",
+        "componentSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "object-detection-car",
+    "name": "Object Detection Car",
+    "image": "assets/products/object-detection-car.jpg",
+    "imageCredit": "Photo: Anani A. George, CC0 (public domain), via Wikimedia Commons (background removed)",
+    "summary": "Build a rover that senses obstacles and can move a sensor mount.",
+    "components": [
+      {
+        "label": "HC-SR04 ultrasonic sensor",
+        "componentSlug": "hc-sr04"
+      },
+      {
+        "label": "SG90 servo (sensor mount)",
+        "componentSlug": "sg90-servo"
+      },
+      {
+        "label": "Jumper wires (set)",
+        "componentSlug": "jumper-wires"
+      },
+      {
+        "label": "Arduino board",
+        "componentSlug": null
+      },
+      {
+        "label": "BO wheels ×4",
+        "componentSlug": "bo-wheel"
+      },
+      {
+        "label": "L298N motor driver",
+        "componentSlug": null
+      },
+      {
+        "label": "BO gear motors",
+        "componentSlug": null
+      },
+      {
+        "label": "18650 Li-ion batteries ×2",
+        "componentSlug": "li-ion-18650-21700"
+      }
+    ]
+  }
+]
