@@ -3,7 +3,7 @@
     "slug": "arduino-uno",
     "name": "Arduino Uno R3",
     "category": "Boards & Controllers",
-    "image": "assets/products/arduino-uno.jpg",
+    "image": "assets/illustrations/arduino-uno.svg",
     "summary": "A dependable starting point for prototyping interactive electronics. USB powered, beginner friendly, and ready for a thousand different ideas.",
     "specs": [
       {
@@ -34,14 +34,13 @@
     ],
     "safetyNote": null,
     "price": 649,
-    "imageCredit": "Photo: MakeMagazinDE, CC BY-SA 4.0, via Wikimedia Commons",
     "id": 1
   },
   {
     "slug": "n20-micro-gear-motor",
     "name": "N20 Micro Gear Motor",
     "category": "Motors & Actuators",
-    "image": null,
+    "image": "assets/illustrations/n20-micro-gear-motor.svg",
     "summary": "Compact geared motor for small robots, smart mechanisms, and mobile builds. A great balance of torque and speed in a tiny package.",
     "specs": [
       {
@@ -72,14 +71,13 @@
     ],
     "safetyNote": null,
     "price": 189,
-    "imageCredit": null,
     "id": 2
   },
   {
     "slug": "2s-li-ion-battery-pack",
     "name": "2S Li-ion Battery Pack",
     "category": "Power",
-    "image": null,
+    "image": "assets/illustrations/2s-li-ion-battery-pack.svg",
     "summary": "A compact rechargeable power source for portable prototypes and robotics. Includes a protected pack with a standard JST lead.",
     "specs": [
       {
@@ -110,14 +108,13 @@
     ],
     "safetyNote": "Use a compatible charger and never short or puncture the battery pack.",
     "price": 429,
-    "imageCredit": null,
     "id": 3
   },
   {
     "slug": "hc-sr04",
     "name": "HC-SR04 Ultrasonic",
     "category": "Sensors",
-    "image": "assets/products/hc-sr04.jpg",
+    "image": "assets/illustrations/hc-sr04.svg",
     "summary": "Measures distance with sound, like a bat. The go-to sensor for obstacle-avoiding robots, parking sensors and water-level meters.",
     "specs": [
       {
@@ -169,14 +166,13 @@
     ],
     "safetyNote": null,
     "price": 99,
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
     "id": 4
   },
   {
     "slug": "esp32",
     "name": "ESP32 DevKit V1",
     "category": "Boards & Controllers",
-    "image": "assets/products/esp32.jpg",
+    "image": "assets/illustrations/esp32.svg",
     "summary": "A powerful connected board for IoT projects. Built in Wi-Fi and Bluetooth make it a versatile choice for wireless prototypes.",
     "specs": [
       {
@@ -207,14 +203,13 @@
     ],
     "safetyNote": null,
     "price": 499,
-    "imageCredit": "Photo: Ubahnverleih, CC0 (public domain), via Wikimedia Commons",
     "id": 5
   },
   {
     "slug": "sg90-servo",
     "name": "SG90 Micro Servo",
     "category": "Motors & Actuators",
-    "image": "assets/products/sg90-servo.jpg",
+    "image": "assets/illustrations/sg90-servo.svg",
     "summary": "A tiny, light servo you can turn to an exact angle. Ideal for robot arms, sensor scanners, door latches and RC models.",
     "specs": [
       {
@@ -262,14 +257,13 @@
     ],
     "safetyNote": null,
     "price": 129,
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
     "id": 6
   },
   {
     "slug": "arduino-nano",
     "name": "Arduino Nano",
     "category": "Boards & Controllers",
-    "image": "assets/products/arduino-nano.jpg",
+    "image": "assets/illustrations/arduino-nano.svg",
     "summary": "All the power of an Arduino UNO in a tiny board that plugs straight into a breadboard. Same ATmega328P chip, same code, much smaller.",
     "specs": [
       {
@@ -329,14 +323,13 @@
     ],
     "safetyNote": null,
     "price": 349,
-    "imageCredit": "Photo: MakeMagazinDE, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
     "id": 7
   },
   {
     "slug": "65mm-rubber-wheel",
     "name": "65mm Rubber Wheel",
     "category": "Motors & Actuators",
-    "image": null,
+    "image": "assets/illustrations/65mm-rubber-wheel.svg",
     "summary": "A grippy rubber tire on a lightweight hub, designed to pair with common TT gear motors for small robot chassis builds.",
     "specs": [
       {
@@ -367,15 +360,13 @@
     ],
     "safetyNote": null,
     "price": 79,
-    "imageCredit": null,
     "id": 8
   },
   {
     "slug": "raspberry-pi-5",
     "name": "Raspberry Pi 5",
     "category": "Boards & Controllers",
-    "image": "assets/products/raspberry-pi-5.jpg",
-    "imageCredit": "Photo: SimonWaldherr, CC BY 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/raspberry-pi-5.svg",
     "summary": "A full desktop-class Linux computer the size of a credit card. Run Raspberry Pi OS, Python, a web server, a camera or an AI project, and control hardware through the 40-pin header.",
     "specs": [
       {
@@ -437,8 +428,7 @@
     "slug": "raspberry-pi-4",
     "name": "Raspberry Pi 4 Model B",
     "category": "Boards & Controllers",
-    "image": "assets/products/raspberry-pi-4.jpg",
-    "imageCredit": "Photo: Laserlicht, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/raspberry-pi-4.svg",
     "summary": "The popular, proven Raspberry Pi. A small Linux computer with dual 4K display output, Gigabit Ethernet and USB 3.0 for robotics, IoT hubs and learning to code.",
     "specs": [
       {
@@ -496,8 +486,7 @@
     "slug": "raspberry-pi-pico",
     "name": "Raspberry Pi Pico (RP2040)",
     "category": "Boards & Controllers",
-    "image": "assets/products/raspberry-pi-pico.jpg",
-    "imageCredit": "Photo: Phiarc, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/raspberry-pi-pico.svg",
     "summary": "A tiny, low-cost microcontroller board from Raspberry Pi. Drag-and-drop programming over USB, with MicroPython or C/C++, and breadboard-friendly pins.",
     "specs": [
       {
@@ -551,8 +540,7 @@
     "slug": "nodemcu-esp8266",
     "name": "NodeMCU ESP8266 (LoLin V3)",
     "category": "Boards & Controllers",
-    "image": "assets/products/nodemcu-esp8266.jpg",
-    "imageCredit": "Photo: Raimond Spekking, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/nodemcu-esp8266.svg",
     "summary": "A cheap Wi-Fi development board for IoT. Program it like an Arduino and connect sensors to your phone, a web dashboard or the cloud.",
     "specs": [
       {
@@ -602,8 +590,7 @@
     "slug": "esp-01",
     "name": "ESP-01 Wi-Fi Module (ESP8266)",
     "category": "Wireless & Communication",
-    "image": "assets/products/esp-01.jpg",
-    "imageCredit": "Photo: Make Magazin DE, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/esp-01.svg",
     "summary": "A thumbnail-sized ESP8266 Wi-Fi module. Add Wi-Fi to an Arduino using AT commands, or program it directly for very small IoT gadgets.",
     "specs": [
       {
@@ -649,8 +636,7 @@
     "slug": "rfid-rc522",
     "name": "RFID Reader Module RC522 (13.56 MHz)",
     "category": "Wireless & Communication",
-    "image": "assets/products/rfid-rc522.jpg",
-    "imageCredit": "Photo: Giacomo Alessandroni, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/rfid-rc522.svg",
     "summary": "Read and write contactless RFID cards and key tags. Build door locks, attendance systems and tap-to-start projects with an Arduino or ESP32.",
     "specs": [
       {
@@ -696,8 +682,7 @@
     "slug": "dht11",
     "name": "DHT11 Temperature & Humidity Sensor Module",
     "category": "Sensors",
-    "image": "assets/products/dht11.jpg",
-    "imageCredit": "Photo: Edwiyanto, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/dht11.svg",
     "summary": "A simple, low-cost digital sensor for room temperature and humidity. Perfect for a first weather station or plant monitor.",
     "specs": [
       {
@@ -743,8 +728,7 @@
     "slug": "dht22",
     "name": "DHT22 (AM2302) Temperature & Humidity Sensor Module",
     "category": "Sensors",
-    "image": "assets/products/dht22.jpg",
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/dht22.svg",
     "summary": "The more accurate big brother of the DHT11, with a wider range and 0.1-step readings. Great when you need reliable climate data.",
     "specs": [
       {
@@ -794,8 +778,7 @@
     "slug": "pir-sensor",
     "name": "PIR Motion Sensor (HC-SR501)",
     "category": "Sensors",
-    "image": "assets/products/pir-sensor.jpg",
-    "imageCredit": "Photo: Nowforever, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/pir-sensor.svg",
     "summary": "Detects people moving by sensing body heat. Use it for automatic lights, burglar alarms and motion-triggered cameras.",
     "specs": [
       {
@@ -849,8 +832,7 @@
     "slug": "lcd-16x2",
     "name": "16x2 Character LCD Display",
     "category": "Displays",
-    "image": "assets/products/lcd-16x2.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/lcd-16x2.svg",
     "summary": "The classic text display. Show sensor readings, menus and messages on 2 lines of 16 characters with the Arduino LiquidCrystal library.",
     "specs": [
       {
@@ -896,8 +878,7 @@
     "slug": "stepper-28byj48",
     "name": "28BYJ-48 Stepper Motor + ULN2003 Driver",
     "category": "Motors & Actuators",
-    "image": "assets/products/stepper-28byj48.jpg",
-    "imageCredit": "Photo: Kushagra Keshari, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/stepper-28byj48.svg",
     "summary": "A geared stepper motor that moves in precise small steps, with a plug-in driver board. Great for clocks, turntables, blinds and small CNC ideas.",
     "specs": [
       {
@@ -947,8 +928,7 @@
     "slug": "relay-module",
     "name": "5 V Single-Channel Relay Module",
     "category": "Motors & Actuators",
-    "image": "assets/products/relay-module.jpg",
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/relay-module.svg",
     "summary": "Lets a small Arduino signal switch a much bigger load, like a lamp, fan or pump, using an electrically isolated mechanical switch.",
     "specs": [
       {
@@ -994,8 +974,7 @@
     "slug": "tp4056",
     "name": "TP4056 Li-ion Charger Module (with protection)",
     "category": "Power",
-    "image": "assets/products/tp4056.jpg",
-    "imageCredit": "Photo: -stk, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/tp4056.svg",
     "summary": "Charge a single 3.7 V Li-ion or LiPo cell, like an 18650, from any USB charger. The built-in protection stops overcharge, deep discharge and short circuits.",
     "specs": [
       {
@@ -1053,8 +1032,7 @@
     "slug": "breadboard",
     "name": "Half-Size Breadboard (400 points)",
     "category": "Prototyping Essentials",
-    "image": "assets/products/breadboard.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/breadboard.svg",
     "summary": "Build and change circuits without soldering. Push components and jumper wires into the holes and you're ready to test.",
     "specs": [
       {
@@ -1092,8 +1070,7 @@
     "slug": "jumper-wires",
     "name": "Female-to-Female Jumper Wires",
     "category": "Prototyping Essentials",
-    "image": "assets/products/jumper-wires.jpg",
-    "imageCredit": "Photo: Limor from New York City, USA, CC BY 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/jumper-wires.svg",
     "summary": "Colour-coded wires with female sockets on both ends. Connect modules with pin headers, like sensors and drivers, straight to your board.",
     "specs": [
       {
@@ -1127,8 +1104,7 @@
     "slug": "leds",
     "name": "5 mm Red LEDs",
     "category": "Prototyping Essentials",
-    "image": "assets/products/leds.jpg",
-    "imageCredit": "Photo: Nevit Dilmen, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/leds.svg",
     "summary": "The first part of every electronics journey: blink an LED. Bright, cheap and perfect for indicators and learning.",
     "specs": [
       {
@@ -1170,8 +1146,7 @@
     "slug": "potentiometer",
     "name": "10 kΩ Rotary Potentiometer",
     "category": "Prototyping Essentials",
-    "image": "assets/products/potentiometer.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/potentiometer.svg",
     "summary": "A knob you can turn to change a value. Read it on an analog pin to control brightness, speed, volume or a menu.",
     "specs": [
       {
@@ -1209,8 +1184,7 @@
     "slug": "bldc-eaglepower-p60",
     "name": "EaglePower P60 KV330 Brushless Drone Motor",
     "category": "Drone & RC Parts",
-    "image": "assets/products/bldc-eaglepower-p60.jpg",
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/bldc-eaglepower-p60.svg",
     "summary": "A large brushless outrunner motor for heavy-lift multirotors, such as agricultural spraying drones. The speed controller (ESC) is built into the arm mount, so it fits straight onto a frame tube.",
     "specs": [
       {
@@ -1251,8 +1225,7 @@
     "slug": "esc-35a",
     "name": "35A Brushless ESC",
     "category": "Drone & RC Parts",
-    "image": "assets/products/esc-35a.jpg",
-    "imageCredit": "Photo: Avsar Aras, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/esc-35a.svg",
     "summary": "An electronic speed controller (ESC) for driving a brushless motor from a LiPo battery. It takes a standard RC throttle signal from a receiver or flight controller and drives the motor's three phases.",
     "specs": [
       {
@@ -1289,8 +1262,7 @@
     "slug": "lipo-3s-5200mah",
     "name": "AGAPOWER 3S 11.1 V 5200 mAh 60C LiPo (Hard Case)",
     "category": "Batteries & Charging",
-    "image": "assets/products/lipo-3s-5200mah.jpg",
-    "imageCredit": "Photo: RC Lipo battery, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/lipo-3s-5200mah.svg",
     "summary": "A high-capacity 3-cell lithium-polymer pack in a hard case, made for RC car racing. It also suits other projects that run on 3S (11.1 V) power.",
     "specs": [
       {
@@ -1335,8 +1307,7 @@
     "slug": "lipo-2s-2200mah",
     "name": "Zippy 2S 7.4 V 2200 mAh 20C LiPo",
     "category": "Batteries & Charging",
-    "image": "assets/products/lipo-2s-2200mah.jpg",
-    "imageCredit": "Photo: KundaliniZero, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/lipo-2s-2200mah.svg",
     "summary": "A compact 2-cell LiPo pack. 7.4 V is a good fit for small RC cars, robot cars and projects that use a regulator for 5 V logic.",
     "specs": [
       {
@@ -1377,8 +1348,7 @@
     "slug": "lipo-1s-1000mah",
     "name": "1S 3.7 V 1000 mAh LiPo Pouch Cell (063450)",
     "category": "Batteries & Charging",
-    "image": "assets/products/lipo-1s-1000mah.jpg",
-    "imageCredit": "Photo: BrittanyJ, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/lipo-1s-1000mah.svg",
     "summary": "A thin, single-cell lithium-polymer pouch battery with wire leads. It powers wearables, ESP32 or Arduino projects and handheld gadgets, often with a TP4056 charger board.",
     "specs": [
       {
@@ -1415,8 +1385,7 @@
     "slug": "lipo-balance-charger",
     "name": "Turnigy Accucel-6 LiPo Balance Charger",
     "category": "Batteries & Charging",
-    "image": "assets/products/lipo-balance-charger.jpg",
-    "imageCredit": "Photo: Teardown Central, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/lipo-balance-charger.svg",
     "summary": "A popular hobby balance charger for LiPo, Li-ion and LiFe packs, plus NiMH/NiCd and lead-acid. It charges each cell evenly through the balance lead and has storage and discharge modes.",
     "specs": [
       {
@@ -1469,8 +1438,7 @@
     "slug": "li-ion-18650-21700",
     "name": "18650 & 21700 Li-ion Cells",
     "category": "Batteries & Charging",
-    "image": "assets/products/li-ion-18650-21700.jpg",
-    "imageCredit": "Photo: Retired electrician, CC0 (public domain), via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/li-ion-18650-21700.svg",
     "summary": "The two most common rechargeable cylindrical lithium-ion cells. 18650 powers most robot car kits and power banks; the larger 21700 holds more energy. Shown side by side for size.",
     "specs": [
       {
@@ -1511,8 +1479,7 @@
     "slug": "cr2032-coin-cell",
     "name": "CR2032 3 V Lithium Coin Cell",
     "category": "Batteries & Charging",
-    "image": "assets/products/cr2032-coin-cell.jpg",
-    "imageCredit": "Photo: Raimond Spekking, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/cr2032-coin-cell.svg",
     "summary": "A standard non-rechargeable coin cell for RTC modules, remotes, small sensors and keeping a clock running when the main power is off.",
     "specs": [
       {
@@ -1549,8 +1516,7 @@
     "slug": "nema17-stepper",
     "name": "NEMA 17 Stepper Motor",
     "category": "Motors & Actuators",
-    "image": "assets/products/nema17-stepper.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/nema17-stepper.svg",
     "summary": "The stepper motor used in most 3D printers and small CNC machines. It moves in precise steps, so you can position things accurately without a feedback sensor. Drive it with an A4988 or a similar driver.",
     "specs": [
       {
@@ -1591,8 +1557,7 @@
     "slug": "a4988-driver",
     "name": "A4988 Stepper Motor Driver Module",
     "category": "Motors & Actuators",
-    "image": "assets/products/a4988-driver.jpg",
-    "imageCredit": "Photo: Kushagra Keshari, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/a4988-driver.svg",
     "summary": "A small driver board that lets an Arduino or ESP32 drive a bipolar stepper motor (such as a NEMA 17) with just two pins, STEP and DIR. It has adjustable current limiting.",
     "specs": [
       {
@@ -1637,8 +1602,7 @@
     "slug": "standard-servo",
     "name": "Standard-Size Hobby Servo",
     "category": "Motors & Actuators",
-    "image": "assets/products/standard-servo.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/standard-servo.svg",
     "summary": "A full-size RC servo for jobs that need more strength than a micro SG90, such as steering, robot arm joints and grippers. It turns to an angle set by a PWM signal.",
     "specs": [
       {
@@ -1679,8 +1643,7 @@
     "slug": "continuous-servo",
     "name": "Continuous Rotation Servo",
     "category": "Motors & Actuators",
-    "image": "assets/products/continuous-servo.jpg",
-    "imageCredit": "Photo: oomlout, CC BY-SA 2.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/continuous-servo.svg",
     "summary": "A servo modified to spin continuously in either direction instead of moving to an angle. It makes an easy, geared drive motor for small robots with no separate motor driver needed.",
     "specs": [
       {
@@ -1717,8 +1680,7 @@
     "slug": "dc-motor-130",
     "name": "130-Size DC Hobby Motor",
     "category": "Motors & Actuators",
-    "image": "assets/products/dc-motor-130.jpg",
-    "imageCredit": "Photo: Nevit Dilmen, CC BY-SA 3.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/dc-motor-130.svg",
     "summary": "The classic small DC motor found in toys, fans and school science kits. Wire it to a battery and it spins, or use a transistor or motor driver for speed control.",
     "specs": [
       {
@@ -1759,8 +1721,7 @@
     "slug": "coreless-motor",
     "name": "Coreless Micro DC Motor (3.7 V)",
     "category": "Motors & Actuators",
-    "image": "assets/products/coreless-motor.jpg",
-    "imageCredit": "Photo: Armenak Margarian, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/coreless-motor.svg",
     "summary": "A tiny, high-speed coreless motor that runs on a single 3.7 V LiPo cell. These are the motors used in micro quadcopters and small, light projects.",
     "specs": [
       {
@@ -1797,8 +1758,7 @@
     "slug": "vibration-motor",
     "name": "Vibration Motor (ERM)",
     "category": "Motors & Actuators",
-    "image": "assets/products/vibration-motor.jpg",
-    "imageCredit": "Photo: Majid (Wikimedia Commons user), Public domain, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/vibration-motor.svg",
     "summary": "A small DC motor with an off-centre weight on its shaft. When it spins, it shakes, which is how phones, game controllers and alarms buzz.",
     "specs": [
       {
@@ -1831,8 +1791,7 @@
     "slug": "bo-wheel",
     "name": "BO Motor Wheel (Pair)",
     "category": "Robot Chassis & Wheels",
-    "image": "assets/products/bo-wheel.jpg",
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/bo-wheel.svg",
     "summary": "The plastic wheels with rubber tyres used on most Arduino robot car kits. They push straight onto the shaft of yellow BO (TT) gear motors.",
     "specs": [
       {
@@ -1869,8 +1828,7 @@
     "slug": "track-wheel-set",
     "name": "Track Belt Wheel Set (Tank Chassis)",
     "category": "Robot Chassis & Wheels",
-    "image": "assets/products/track-wheel-set.jpg",
-    "imageCredit": "Photo: Suyash Dwivedi, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/track-wheel-set.svg",
     "summary": "A set of rubber track belts and drive wheels for building a tracked, tank-style robot. Tracks grip better than wheels on rough ground, carpet and ramps.",
     "specs": [
       {

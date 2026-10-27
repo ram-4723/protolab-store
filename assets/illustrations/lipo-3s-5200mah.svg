@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img"><defs>
+      <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4b9b70"/><stop offset="1" stop-color="#176342"/></linearGradient>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7b837f"/><stop offset=".28" stop-color="#eef0e9"/><stop offset=".57" stop-color="#aab0aa"/><stop offset="1" stop-color="#69716d"/></linearGradient>
+      <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#46504b"/><stop offset="1" stop-color="#202923"/></linearGradient>
+      <linearGradient id="case" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5b665e"/><stop offset="1" stop-color="#29352e"/></linearGradient>
+      <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="9" flood-color="#27372c" flood-opacity=".2"/></filter>
+      <pattern id="holes" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="2.35" fill="#b9c1b5"/><circle cx="7.5" cy="7.5" r="1.15" fill="#647a6a"/></pattern>
+    </defs><ellipse cx="244" cy="294" rx="140" ry="17" fill="#455344" opacity=".12"/><g filter="url(#shadow)"><rect x="120" y="94" width="240" height="155" rx="15" fill="url(#dark)" stroke="#777f75" stroke-width="5"/><rect x="137" y="110" width="206" height="123" rx="8" fill="#3e4941"/><path d="M360 128c38 8 42 18 55 6M360 159c34 5 38 24 55 14" fill="none" stroke="#c14139" stroke-width="7"/><path d="M360 177c32 8 43 16 55 10" fill="none" stroke="#262e2a" stroke-width="7"/><rect x="170" y="86" width="57" height="9" rx="4" fill="#b9bdaf"/></g></svg>

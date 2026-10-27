@@ -2,8 +2,7 @@
   {
     "slug": "bluetooth-car",
     "name": "Bluetooth Car",
-    "image": "assets/products/bluetooth-car.jpg",
-    "imageCredit": "Photo: shreyansh232, CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/bluetooth-car.svg",
     "summary": "Build a small four-wheel rover and explore wireless control.",
     "components": [
       {
@@ -39,8 +38,7 @@
   {
     "slug": "drone",
     "name": "Drone",
-    "image": "assets/products/drone.jpg",
-    "imageCredit": "Photo: Alexey M., CC BY-SA 4.0, via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/drone.svg",
     "summary": "Explore a quadcopter build with flight control, motors, and a multi-cell power system.",
     "components": [
       {
@@ -74,8 +72,7 @@
   {
     "slug": "object-detection-car",
     "name": "Object Detection Car",
-    "image": "assets/products/object-detection-car.jpg",
-    "imageCredit": "Photo: Anani A. George, CC0 (public domain), via Wikimedia Commons (background removed)",
+    "image": "assets/illustrations/object-detection-car.svg",
     "summary": "Build a rover that senses obstacles and can move a sensor mount.",
     "components": [
       {
