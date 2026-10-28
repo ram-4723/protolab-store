@@ -7,31 +7,38 @@
     "components": [
       {
         "label": "Arduino board",
-        "componentSlug": null
+        "componentSlug": "arduino-uno",
+        "similarSlug": null
       },
       {
         "label": "HC-05 Bluetooth module",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": null
       },
       {
         "label": "L298N motor driver",
-        "componentSlug": null
+        "componentSlug": "l298n-motor-driver",
+        "similarSlug": null
       },
       {
         "label": "BO gear motors",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": "bo-motor-wheel-kit"
       },
       {
         "label": "BO wheels ×4",
-        "componentSlug": "bo-wheel"
+        "componentSlug": null,
+        "similarSlug": "bo-motor-wheel-kit"
       },
       {
         "label": "18650 Li-ion batteries ×2",
-        "componentSlug": "li-ion-18650-21700"
+        "componentSlug": null,
+        "similarSlug": null
       },
       {
         "label": "Jumper wires (set)",
-        "componentSlug": "jumper-wires"
+        "componentSlug": "jumper-wires",
+        "similarSlug": null
       }
     ]
   },
@@ -43,29 +50,33 @@
     "components": [
       {
         "label": "LiPo balance charger",
-        "componentSlug": "lipo-balance-charger"
+        "componentSlug": null,
+        "similarSlug": null
       },
       {
         "label": "35A ESC (similar product)",
         "componentSlug": null,
-        "similarSlug": "esc-35a"
+        "similarSlug": null
       },
       {
         "label": "3S 2200 mAh LiPo battery (similar product)",
         "componentSlug": null,
-        "similarSlug": "lipo-3s-5200mah"
+        "similarSlug": "lipo-3s-2200mah"
       },
       {
         "label": "1000 KV drone motors",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": "a2212-brushless-motor"
       },
       {
         "label": "Flight controller",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": null
       },
       {
         "label": "Frame and propellers",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": "drone-propellers-1045"
       }
     ]
   },
@@ -77,35 +88,43 @@
     "components": [
       {
         "label": "HC-SR04 ultrasonic sensor",
-        "componentSlug": "hc-sr04"
+        "componentSlug": "hc-sr04",
+        "similarSlug": null
       },
       {
         "label": "SG90 servo (sensor mount)",
-        "componentSlug": "sg90-servo"
+        "componentSlug": "sg90-servo",
+        "similarSlug": null
       },
       {
         "label": "Jumper wires (set)",
-        "componentSlug": "jumper-wires"
+        "componentSlug": "jumper-wires",
+        "similarSlug": null
       },
       {
         "label": "Arduino board",
-        "componentSlug": null
+        "componentSlug": "arduino-uno",
+        "similarSlug": null
       },
       {
         "label": "BO wheels ×4",
-        "componentSlug": "bo-wheel"
+        "componentSlug": null,
+        "similarSlug": "bo-motor-wheel-kit"
       },
       {
         "label": "L298N motor driver",
-        "componentSlug": null
+        "componentSlug": "l298n-motor-driver",
+        "similarSlug": null
       },
       {
         "label": "BO gear motors",
-        "componentSlug": null
+        "componentSlug": null,
+        "similarSlug": "bo-motor-wheel-kit"
       },
       {
         "label": "18650 Li-ion batteries ×2",
-        "componentSlug": "li-ion-18650-21700"
+        "componentSlug": null,
+        "similarSlug": null
       }
     ]
   }
