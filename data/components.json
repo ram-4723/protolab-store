@@ -3,7 +3,7 @@
     "slug": "arduino-uno",
     "name": "Arduino Uno R3",
     "category": "Boards & Controllers",
-    "image": "assets/illustrations/arduino-uno.svg",
+    "image": "assets/products/arduino-uno.webp",
     "summary": "A dependable starting point for prototyping interactive electronics. USB powered, beginner friendly, and ready for a thousand different ideas.",
     "specs": [
       {
@@ -112,10 +112,10 @@
   },
   {
     "slug": "hc-sr04",
-    "name": "HC-SR04 Ultrasonic",
+    "name": "HC-SR04 Ultrasonic Sensor (Pack of 2)",
     "category": "Sensors",
-    "image": "assets/illustrations/hc-sr04.svg",
-    "summary": "Measures distance with sound, like a bat. The go-to sensor for obstacle-avoiding robots, parking sensors and water-level meters.",
+    "image": "assets/products/hc-sr04.webp",
+    "summary": "A pair of HC-SR04 ultrasonic distance sensors for obstacle-avoiding robots, parking sensors, and distance-measuring projects.",
     "specs": [
       {
         "label": "Supply voltage",
@@ -161,8 +161,8 @@
       "distance measurement"
     ],
     "cardChips": [
-      "2–400 cm",
-      "5 V"
+      "2 sensors",
+      "2–400 cm"
     ],
     "safetyNote": null,
     "price": 99,
@@ -172,7 +172,7 @@
     "slug": "esp32",
     "name": "ESP32 DevKit V1",
     "category": "Boards & Controllers",
-    "image": "assets/illustrations/esp32.svg",
+    "image": "assets/products/esp32.webp",
     "summary": "A powerful connected board for IoT projects. Built in Wi-Fi and Bluetooth make it a versatile choice for wireless prototypes.",
     "specs": [
       {
@@ -209,7 +209,7 @@
     "slug": "sg90-servo",
     "name": "SG90 Micro Servo",
     "category": "Motors & Actuators",
-    "image": "assets/illustrations/sg90-servo.svg",
+    "image": "assets/products/sg90-servo.webp",
     "summary": "A tiny, light servo you can turn to an exact angle. Ideal for robot arms, sensor scanners, door latches and RC models.",
     "specs": [
       {
@@ -682,7 +682,7 @@
     "slug": "dht11",
     "name": "DHT11 Temperature & Humidity Sensor Module",
     "category": "Sensors",
-    "image": "assets/illustrations/dht11.svg",
+    "image": "assets/products/dht11.webp",
     "summary": "A simple, low-cost digital sensor for room temperature and humidity. Perfect for a first weather station or plant monitor.",
     "specs": [
       {
@@ -928,7 +928,7 @@
     "slug": "relay-module",
     "name": "5 V Single-Channel Relay Module",
     "category": "Motors & Actuators",
-    "image": "assets/illustrations/relay-module.svg",
+    "image": "assets/products/relay-module.webp",
     "summary": "Lets a small Arduino signal switch a much bigger load, like a lamp, fan or pump, using an electrically isolated mechanical switch.",
     "specs": [
       {
@@ -1068,22 +1068,18 @@
   },
   {
     "slug": "jumper-wires",
-    "name": "Female-to-Female Jumper Wires",
+    "name": "Jumper Wire Set (30 Pieces)",
     "category": "Prototyping Essentials",
-    "image": "assets/illustrations/jumper-wires.svg",
-    "summary": "Colour-coded wires with female sockets on both ends. Connect modules with pin headers, like sensors and drivers, straight to your board.",
+    "image": "assets/products/jumper-wire-set.webp",
+    "summary": "A mixed set of male-to-male, female-to-female, and male-to-female jumper leads for breadboard and module wiring.",
     "specs": [
       {
-        "label": "Connector",
-        "value": "Female to female (Dupont-style)"
+        "label": "Contents",
+        "value": "30 leads: 10 of each connector combination"
       },
       {
-        "label": "Fits",
-        "value": "Standard 2.54 mm (0.1 in) header pins"
-      },
-      {
-        "label": "Colours",
-        "value": "Multiple, for easy wiring"
+        "label": "Use",
+        "value": "Breadboard and module prototyping"
       }
     ],
     "goodFor": [
@@ -1093,8 +1089,8 @@
       "quick connections"
     ],
     "cardChips": [
-      "Female–Female",
-      "2.54 mm"
+      "30 pieces",
+      "3 connector types"
     ],
     "safetyNote": null,
     "price": null,
@@ -1852,5 +1848,453 @@
     "safetyNote": "Motors, frame and mounting hardware are not included.",
     "price": null,
     "id": 42
+  },
+  {
+    "slug": "bluetooth-audio-receiver",
+    "name": "Bluetooth 3.0 Audio Receiver",
+    "category": "Wireless & Communication",
+    "image": "assets/products/bluetooth-audio-receiver.webp",
+    "summary": "A compact Bluetooth audio receiver board for adding wireless audio input to a speaker or audio project.",
+    "specs": [
+      {
+        "label": "Bluetooth",
+        "value": "Version 3.0 (as listed)"
+      },
+      {
+        "label": "Supply",
+        "value": "5 V (as listed)"
+      },
+      {
+        "label": "Board",
+        "value": "Audio receiver module"
+      }
+    ],
+    "goodFor": [
+      "wireless audio",
+      "speaker projects"
+    ],
+    "cardChips": [
+      "Bluetooth 3.0",
+      "5 V"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 43
+  },
+  {
+    "slug": "lipo-3s-2200mah",
+    "name": "3S LiPo Drone Battery (2200 mAh)",
+    "category": "Batteries & Charging",
+    "image": "assets/products/drone-lipo-2200mah.webp",
+    "summary": "A 2200 mAh LiPo pack pictured with an XT-style connector and balance lead. Confirm the exact cell count and voltage variant with the supplier before connecting.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "2200 mAh (as listed)"
+      },
+      {
+        "label": "Connector",
+        "value": "XT-style main plug and balance lead, as pictured"
+      },
+      {
+        "label": "Voltage",
+        "value": "Confirm exact pack voltage before use"
+      }
+    ],
+    "goodFor": [
+      "drone builds",
+      "RC projects"
+    ],
+    "cardChips": [
+      "2200 mAh",
+      "LiPo"
+    ],
+    "safetyNote": "LiPo safety: charge with a compatible balance charger, never unattended, and in a fire-safe area. Confirm the cell count before charging.",
+    "price": null,
+    "id": 44
+  },
+  {
+    "slug": "drone-propellers-1045",
+    "name": "1045 Drone Propeller Set (4 Pieces)",
+    "category": "Drone & RC Parts",
+    "image": "assets/products/drone-propellers-1045.webp",
+    "summary": "Four 1045 propeller blades supplied as clockwise and counter-clockwise pairs for compatible drone motors.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "1045"
+      },
+      {
+        "label": "Contents",
+        "value": "4 blades: clockwise and counter-clockwise pairs"
+      }
+    ],
+    "goodFor": [
+      "quadcopter builds",
+      "replacement propellers"
+    ],
+    "cardChips": [
+      "1045 size",
+      "4 blades"
+    ],
+    "safetyNote": "Remove propellers before bench-testing motors. Match rotation direction and motor shaft fit.",
+    "price": null,
+    "id": 45
+  },
+  {
+    "slug": "a2212-brushless-motor",
+    "name": "A2212 Brushless Drone Motor",
+    "category": "Drone & RC Parts",
+    "image": "assets/products/a2212-brushless-motor.webp",
+    "summary": "A2212 outrunner motor shown with its propeller adapter and mounting hardware. The pictured motor label reads 1000 KV; check the exact variant supplied.",
+    "specs": [
+      {
+        "label": "Model",
+        "value": "A2212/13T (pictured)"
+      },
+      {
+        "label": "KV marking",
+        "value": "1000 KV on the supplied photo"
+      },
+      {
+        "label": "Included",
+        "value": "Motor, adapter, and mounting parts as pictured"
+      }
+    ],
+    "goodFor": [
+      "quadcopter builds",
+      "brushless motor learning"
+    ],
+    "cardChips": [
+      "A2212",
+      "1000 KV pictured"
+    ],
+    "safetyNote": "Use a compatible ESC and propeller. Secure the motor and remove the propeller during setup; verify the supplier variant and current limits.",
+    "price": null,
+    "id": 46
+  },
+  {
+    "slug": "ttp223-touch-sensor",
+    "name": "TTP223 Capacitive Touch Sensor",
+    "category": "Sensors",
+    "image": "assets/products/ttp223-touch-sensor.webp",
+    "summary": "A capacitive touch module that detects a finger touch on its sensing pad and provides a digital output.",
+    "specs": [
+      {
+        "label": "Controller",
+        "value": "TTP223 (as listed)"
+      },
+      {
+        "label": "Type",
+        "value": "Capacitive touch input"
+      },
+      {
+        "label": "Output",
+        "value": "Digital signal"
+      }
+    ],
+    "goodFor": [
+      "touch controls",
+      "interactive projects"
+    ],
+    "cardChips": [
+      "Capacitive touch",
+      "Digital output"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 47
+  },
+  {
+    "slug": "drone-lipo-3500mah",
+    "name": "3S LiPo Drone Battery (3500 mAh)",
+    "category": "Batteries & Charging",
+    "image": "assets/products/lipo-3s-3500mah.webp",
+    "summary": "A 3-cell drone LiPo pack. The supplied photo label shows 11.1 V, 3500 mAh, and 80C; verify the exact product variant before ordering.",
+    "specs": [
+      {
+        "label": "Voltage",
+        "value": "11.1 V shown on pack label (3S)"
+      },
+      {
+        "label": "Capacity",
+        "value": "3500 mAh shown on pack label"
+      },
+      {
+        "label": "Discharge rating",
+        "value": "80C shown on pack label"
+      },
+      {
+        "label": "Dimensions",
+        "value": "Approx. 104 × 34 × 17 mm shown"
+      }
+    ],
+    "goodFor": [
+      "drone builds",
+      "RC aircraft"
+    ],
+    "cardChips": [
+      "11.1 V · 3S",
+      "3500 mAh · 80C"
+    ],
+    "safetyNote": "LiPo safety: charge with a compatible balance charger, never unattended, and in a fire-safe bag. Do not puncture, short, or use a swollen pack.",
+    "price": null,
+    "id": 48
+  },
+  {
+    "slug": "dt830d-multimeter",
+    "name": "DT830D Digital Multimeter",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/dt830d-multimeter.webp",
+    "summary": "A handheld digital multimeter for basic voltage, current, resistance, and continuity checks in electronics work.",
+    "specs": [
+      {
+        "label": "Model",
+        "value": "DT830D (as pictured)"
+      },
+      {
+        "label": "Display",
+        "value": "Digital LCD"
+      },
+      {
+        "label": "Leads",
+        "value": "Red and black test leads included as pictured"
+      }
+    ],
+    "goodFor": [
+      "electronics debugging",
+      "bench testing"
+    ],
+    "cardChips": [
+      "LCD display",
+      "Test leads"
+    ],
+    "safetyNote": "Follow the meter’s range and input limits. Never measure mains voltage unless trained and using appropriately rated equipment.",
+    "price": null,
+    "id": 49
+  },
+  {
+    "slug": "ir-obstacle-sensor",
+    "name": "IR Obstacle Avoidance Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/ir-obstacle-sensor.webp",
+    "summary": "An infrared emitter and receiver module with an adjustable threshold for detecting nearby obstacles.",
+    "specs": [
+      {
+        "label": "Sensor type",
+        "value": "Infrared emitter and receiver"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Sensitivity trimmer shown"
+      },
+      {
+        "label": "Output",
+        "value": "Digital obstacle-detection signal (typical module)"
+      }
+    ],
+    "goodFor": [
+      "line-following robots",
+      "obstacle detection"
+    ],
+    "cardChips": [
+      "Infrared",
+      "Adjustable"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 50
+  },
+  {
+    "slug": "joystick-module",
+    "name": "Joystick Module for Arduino",
+    "category": "Prototyping Essentials",
+    "image": "assets/products/joystick-module.webp",
+    "summary": "A two-axis thumb joystick module with a push switch for manually controlling robots and interactive builds.",
+    "specs": [
+      {
+        "label": "Axes",
+        "value": "X and Y analog outputs"
+      },
+      {
+        "label": "Switch",
+        "value": "Push-button input"
+      },
+      {
+        "label": "Connector",
+        "value": "5-pin header shown"
+      }
+    ],
+    "goodFor": [
+      "robot control",
+      "manual input"
+    ],
+    "cardChips": [
+      "2-axis",
+      "Push switch"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 51
+  },
+  {
+    "slug": "l298n-motor-driver",
+    "name": "L298N Dual H-Bridge Motor Driver",
+    "category": "Motors & Actuators",
+    "image": "assets/products/l298n-motor-driver.webp",
+    "summary": "A dual H-bridge driver board for controlling DC motors or a stepper motor from a microcontroller.",
+    "specs": [
+      {
+        "label": "Driver",
+        "value": "L298N dual H-bridge"
+      },
+      {
+        "label": "Outputs",
+        "value": "Two DC motor channels (typical board)"
+      },
+      {
+        "label": "Board features",
+        "value": "Heatsink and screw terminals shown"
+      }
+    ],
+    "goodFor": [
+      "robot cars",
+      "motor control"
+    ],
+    "cardChips": [
+      "Dual H-bridge",
+      "DC motors"
+    ],
+    "safetyNote": "Motor supply voltage and current limits depend on the board and cooling. Check the driver datasheet and wiring before use.",
+    "price": null,
+    "id": 52
+  },
+  {
+    "slug": "max7219-dot-matrix",
+    "name": "MAX7219 8×8 LED Matrix Module",
+    "category": "Displays",
+    "image": "assets/products/max7219-dot-matrix.webp",
+    "summary": "An 8×8 LED dot matrix display module with a MAX7219 driver for scrolling text and simple pixel graphics.",
+    "specs": [
+      {
+        "label": "Display",
+        "value": "8 × 8 LED matrix"
+      },
+      {
+        "label": "Driver",
+        "value": "MAX7219"
+      },
+      {
+        "label": "Interface",
+        "value": "Serial control (module variant dependent)"
+      }
+    ],
+    "goodFor": [
+      "LED displays",
+      "scrolling messages"
+    ],
+    "cardChips": [
+      "8×8 LEDs",
+      "MAX7219"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 53
+  },
+  {
+    "slug": "sound-sensor-module",
+    "name": "Sound Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/sound-sensor-module.webp",
+    "summary": "The supplied photo shows an electret microphone and adjustable trimmer, so this is listed as a sound sensor rather than a metal touch sensor. Confirm the exact board model.",
+    "specs": [
+      {
+        "label": "Sensing element",
+        "value": "Electret microphone (pictured)"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Sensitivity trimmer (pictured)"
+      },
+      {
+        "label": "Board model",
+        "value": "Confirm exact model with supplier"
+      }
+    ],
+    "goodFor": [
+      "sound-triggered projects",
+      "audio-reactive builds"
+    ],
+    "cardChips": [
+      "Microphone",
+      "Adjustable"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 54
+  },
+  {
+    "slug": "nrf24l01-transceiver",
+    "name": "NRF24L01 2.4 GHz Transceiver Module",
+    "category": "Wireless & Communication",
+    "image": "assets/products/nrf24l01-transceiver.webp",
+    "summary": "A compact 2.4 GHz radio transceiver module for low-power wireless links between microcontrollers.",
+    "specs": [
+      {
+        "label": "Radio",
+        "value": "2.4 GHz (as listed)"
+      },
+      {
+        "label": "Module",
+        "value": "NRF24L01"
+      },
+      {
+        "label": "Antenna",
+        "value": "PCB trace antenna shown"
+      }
+    ],
+    "goodFor": [
+      "wireless sensor nodes",
+      "remote controls"
+    ],
+    "cardChips": [
+      "2.4 GHz",
+      "SPI radio"
+    ],
+    "safetyNote": "Power the radio module at its specified voltage; do not connect a 5 V supply directly unless your breakout board provides regulation.",
+    "price": null,
+    "id": 55
+  },
+  {
+    "slug": "bo-motor-wheel-kit",
+    "name": "BO Gear Motor and Wheel Kit (4 Pack)",
+    "category": "Robot Chassis & Wheels",
+    "image": "assets/products/bo-motor-wheel-kit.webp",
+    "summary": "A four-wheel robotics set containing yellow dual-shaft BO gear motors and matching wheels, as pictured.",
+    "specs": [
+      {
+        "label": "Contents",
+        "value": "4 BO gear motors and 4 wheels, as pictured"
+      },
+      {
+        "label": "Use",
+        "value": "Small robot car chassis builds"
+      },
+      {
+        "label": "Drive electronics",
+        "value": "Motor driver sold separately unless specified"
+      }
+    ],
+    "goodFor": [
+      "4WD robot cars",
+      "robotics kits"
+    ],
+    "cardChips": [
+      "4 motors",
+      "4 wheels"
+    ],
+    "safetyNote": "Use a motor driver; do not power motors directly from microcontroller pins.",
+    "price": null,
+    "id": 56
   }
 ]
