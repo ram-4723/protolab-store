@@ -7,6 +7,20 @@
   <style>
     :root{--paper:#f4f3ed;--white:#fffefa;--ink:#17211d;--muted:#665b4e;--line:#dedbd1;--green:#dff3bd;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}.shell{width:min(1100px,calc(100% - 36px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:21px 0;border-bottom:1px solid var(--line)}.brand{font-size:21px;font-weight:800;letter-spacing:-.06em;text-decoration:none;color:inherit}.brand-mark{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:8px;background:var(--green);margin-right:8px}.top-links{display:flex;gap:22px;font-size:12px}.top-links a{color:var(--muted);text-decoration:none}.main{padding:56px 0 90px}.kicker{font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#71816f;margin-bottom:12px}h1{font-size:clamp(34px,6vw,54px);line-height:1.03;letter-spacing:-.065em;margin:0 0 12px}.intro{color:var(--muted);max-width:560px;margin:0 0 28px}.panel{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:25px;max-width:620px}.auth-tabs{display:flex;gap:8px;margin-bottom:18px}.auth-tabs button{border:1px solid var(--line);background:transparent;padding:9px 13px;border-radius:5px;cursor:pointer}.auth-tabs button[aria-selected=true]{background:var(--ink);color:white;border-color:var(--ink)}.field{display:grid;gap:6px;margin:14px 0;color:#59402b;font-size:12px}.field input{width:100%;border:1px solid var(--line);border-radius:4px;padding:12px;background:#fff;color:var(--ink);font:inherit}.btn{border:1px solid var(--ink);border-radius:4px;background:var(--ink);color:white;padding:12px 16px;font-weight:650;cursor:pointer}.btn:disabled{opacity:.55;cursor:wait}.status{min-height:23px;color:#59402b;font-size:13px}.account-bar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:28px 0 16px}.account-bar h2{margin:0;font-size:23px;letter-spacing:-.04em}.muted{color:var(--muted);font-size:13px}.requests{display:grid;gap:14px}.request{background:var(--white);border:1px solid var(--line);border-radius:7px;padding:20px}.request-head{display:flex;justify-content:space-between;gap:14px;align-items:start}.request h3{margin:0;font-size:17px}.badge{background:var(--green);border-radius:100px;padding:5px 10px;font:10px var(--mono);text-transform:uppercase;white-space:nowrap}.details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin:16px 0;border-top:1px solid var(--line);padding-top:12px;font:12px var(--mono)}.details span:last-child{color:#422f1f;text-align:right}.message{white-space:pre-wrap;background:#f3f0e7;border-left:2px solid #718b62;padding:12px 14px;color:#4d4338}.empty{border:1px dashed #b8b4a8;padding:25px;border-radius:6px;color:var(--muted)}[hidden]{display:none!important}@media(max-width:620px){.top{padding:16px 0}.top-links{gap:12px}.main{padding-top:38px}.panel,.request{padding:17px}.details{grid-template-columns:1fr}.details span:last-child{text-align:left}.request-head{align-items:center}}
   </style>
+<style>
+body{font-size:16px}
+.top-links{font-size:14px}
+.kicker{font-size:11px}
+.intro,.muted{font-size:15px;line-height:1.6}
+.field{font-size:14px;font-weight:600}
+.auth-tabs button,.btn{font-size:14px;font-weight:700}
+.status{font-size:14px;line-height:1.55}
+.request h3{font-size:19px;font-weight:700}
+.badge{font-size:11px;font-weight:700}
+.details{font-size:14px;line-height:1.6}
+.message{font-size:15px;line-height:1.65}
+.request>p{font-size:15px;line-height:1.6}
+</style>
 </head>
 <body>
   <header class="shell top"><a class="brand" href="index.html"><span class="brand-mark">⌁</span>protolab</a><nav class="top-links"><a href="components.html">Components</a><a href="projects.html">Projects</a></nav></header>
