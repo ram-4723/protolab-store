@@ -6,8 +6,12 @@ module.exports = async function handler(req, res) {
     const { url, anonKey } = env();
     const forwardedHost = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(',')[0].trim();
     const forwardedProto = String(req.headers['x-forwarded-proto'] || (forwardedHost.startsWith('localhost') || forwardedHost.startsWith('127.0.0.1') ? 'http' : 'https')).split(',')[0].trim();
-    const origin = process.env.APP_URL || `${forwardedProto}://${forwardedHost}`;
-    const redirectTo = `${origin.replace(/\/$/, '')}/account.html`;
+    // Always return customer sign-ins to the production site unless an explicit
+    // APP_URL is set. A local preview can be stopped while Google is authenticating,
+    // so deriving the callback solely from the incoming host can strand the user at
+    // localhost after they approve the Google consent screen.
+    const origin = String(process.env.APP_URL || 'https://protolab-store.vercel.app').replace(/\/$/, '');
+    const redirectTo = `${origin}/account.html`;
     const authorize = new URL(`${url}/auth/v1/authorize`);
     authorize.searchParams.set('provider', 'google');
     authorize.searchParams.set('redirect_to', redirectTo);
