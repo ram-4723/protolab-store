@@ -45,6 +45,13 @@ const supabaseFetch = async (path, options = {}) => {
 };
 
 const authenticateAdmin = async (req) => {
+  const user = await authenticateUser(req);
+  if (!user) return null;
+  const admins = await supabaseFetch(`/rest/v1/admin_users?id=eq.${encodeURIComponent(user.id)}&select=id&limit=1`);
+  return admins && admins.length ? user : null;
+};
+
+const authenticateUser = async (req) => {
   const token = String(req.headers.authorization || '').replace(/^Bearer\s+/i, '');
   if (!token || token === req.headers.authorization) return null;
   const { url, anonKey } = env();
@@ -52,9 +59,7 @@ const authenticateAdmin = async (req) => {
     headers: { apikey: anonKey, Authorization: `Bearer ${token}` },
   });
   if (!userResponse.ok) return null;
-  const user = await userResponse.json();
-  const admins = await supabaseFetch(`/rest/v1/admin_users?id=eq.${encodeURIComponent(user.id)}&select=id&limit=1`);
-  return admins && admins.length ? user : null;
+  return userResponse.json();
 };
 
 const sendEmail = async ({ to, subject, text }) => {
@@ -69,4 +74,4 @@ const sendEmail = async ({ to, subject, text }) => {
   return true;
 };
 
-module.exports = { env, json, readJson, supabaseFetch, authenticateAdmin, sendEmail };
+module.exports = { env, json, readJson, supabaseFetch, authenticateUser, authenticateAdmin, sendEmail };

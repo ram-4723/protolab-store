@@ -32,6 +32,7 @@ module.exports = async function handler(req, res) {
     }
     if (body.estimatedBuildTime !== undefined) update.estimated_build_time = shortText(body.estimatedBuildTime, 120) || null;
     if (body.adminNotes !== undefined) update.admin_notes = shortText(body.adminNotes, 5000) || null;
+    if (body.customerMessage !== undefined) update.customer_message = shortText(body.customerMessage, 3000) || null;
     if (body.sendQuote === true) {
       const quoteTotal = body.estimatedTotalInr === undefined ? update.estimated_total_inr : Number(body.estimatedTotalInr);
       if (quoteTotal === undefined || quoteTotal === null || body.estimatedTotalInr === '') return json(res, 400, { error: 'Add an estimated total before sending a quote.' });
@@ -52,7 +53,7 @@ module.exports = async function handler(req, res) {
         emailSent = await sendEmail({
           to: saved.customer_email,
           subject: 'Your ProtoLab project estimate',
-          text: `Hi ${saved.customer_name},\n\nWe reviewed your ${saved.request_type} request.\n\nEstimated total: ₹${saved.estimated_total_inr ?? 'To be confirmed'}\nEstimated build time: ${saved.estimated_build_time || 'To be confirmed'}\n\n${saved.admin_notes ? `Note from ProtoLab: ${saved.admin_notes}\n\n` : ''}This is an estimate; we’ll confirm the final details with you before starting work.\n\nProtoLab`,
+          text: `Hi ${saved.customer_name},\n\nWe reviewed your ${saved.request_type} request.\n\nEstimated total: ₹${saved.estimated_total_inr ?? 'To be confirmed'}\nEstimated build time: ${saved.estimated_build_time || 'To be confirmed'}\n\n${saved.customer_message ? `${saved.customer_message}\n\n` : ''}This is an estimate; we’ll confirm the final details with you before starting work.\n\nProtoLab`,
         });
       } catch (error) { console.error('Customer quote email failed:', error.message); }
     }

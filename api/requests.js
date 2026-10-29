@@ -1,4 +1,4 @@
-const { env, json, readJson, supabaseFetch, sendEmail } = require('./_lib/backend');
+const { env, json, readJson, supabaseFetch, authenticateUser, sendEmail } = require('./_lib/backend');
 
 const clean = (value, max) => String(value || '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -24,12 +24,19 @@ module.exports = async function handler(req, res) {
       return json(res, 400, { error: 'Please enter your name, a valid email, and a description of at least 10 characters.' });
     }
 
+    const hasSession = /^Bearer\s+\S+/i.test(String(req.headers.authorization || ''));
+    const customer = hasSession ? await authenticateUser(req) : null;
+    if (hasSession && !customer) return json(res, 401, { error: 'Your account session expired. Sign in again before sending this request.' });
+    if (customer && String(customer.email || '').toLowerCase() !== customerEmail) {
+      return json(res, 400, { error: 'Use the same email address as your signed-in account so this request appears in your account.' });
+    }
+
     const saved = await supabaseFetch('/rest/v1/customer_requests', {
       method: 'POST',
       headers: {
         Prefer: 'return=representation',
       },
-      body: JSON.stringify({ request_type: requestType, customer_name: customerName, customer_email: customerEmail, description }),
+      body: JSON.stringify({ request_type: requestType, customer_name: customerName, customer_email: customerEmail, customer_user_id: customer?.id || null, description }),
     });
     const [record] = saved;
     if (process.env.ADMIN_NOTIFICATION_EMAIL) {

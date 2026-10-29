@@ -6,15 +6,16 @@ The customer request workflow uses Vercel serverless functions, Supabase Auth/Po
 
 1. Create a Supabase project and keep its database password somewhere safe.
 2. Open **SQL Editor** in the Supabase dashboard and run `supabase/migrations/20261029000100_customer_requests.sql`.
-3. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
-4. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
+3. Run `supabase/migrations/20261029000200_customer_accounts.sql` to link requests to optional customer accounts and add customer-facing replies.
+4. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
+5. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
 
    ```sql
    insert into public.admin_users (id)
    values ('00000000-0000-0000-0000-000000000000');
    ```
 
-5. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
+6. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
 
 ## 2. Deploy with Vercel
 
@@ -45,8 +46,9 @@ Without Resend, requests are still saved and manageable in the admin inbox. “S
 ## Request workflow
 
 - Project and part forms post to `/api/requests` and store validated submissions in `customer_requests`.
+- `/account.html` lets customers create an account or sign in, then see their submitted requests, estimates, statuses, and customer-facing messages.
 - `/admin.html` uses Supabase password authentication and only permits users listed in `admin_users`.
-- Admins can move requests through statuses, add estimated cost/build time and notes, and email a quote when email is configured.
+- Admins can search/filter requests, move them through statuses, set cost/build-time estimates, send customer-facing updates, add private notes, and email estimates when email is configured.
 - Database browser roles (`anon` and `authenticated`) have no table access. Server API functions use the private service-role key.
 
 This is the request/estimate workflow; online payments, shipping integrations, and inventory management are not configured by these files.
