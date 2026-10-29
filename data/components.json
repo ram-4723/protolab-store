@@ -98,7 +98,7 @@
     "slug": "esp32",
     "name": "ESP32 DevKit V1",
     "category": "Boards & Controllers",
-    "image": "assets/products/esp32.webp",
+    "image": "assets/products/esp32-development-board.png",
     "summary": "A powerful connected board for IoT projects. Built in Wi-Fi and Bluetooth make it a versatile choice for wireless prototypes.",
     "specs": [
       {
@@ -661,22 +661,22 @@
   },
   {
     "slug": "sound-sensor-module",
-    "name": "Sound Sensor Module",
+    "name": "LM393 Sound Sensor Module",
     "category": "Sensors",
-    "image": "assets/products/sound-sensor-module.webp",
-    "summary": "The supplied photo shows an electret microphone and adjustable trimmer, so this is listed as a sound sensor rather than a metal touch sensor. Confirm the exact board model.",
+    "image": "assets/products/lm393-sound-sensor.jpg",
+    "summary": "An LM393 microphone sensor board with a sensitivity adjustment trimmer for sound-triggered Arduino builds.",
     "specs": [
       {
-        "label": "Sensing element",
+        "label": "Sensor",
         "value": "Electret microphone (pictured)"
       },
       {
-        "label": "Adjustment",
-        "value": "Sensitivity trimmer (pictured)"
+        "label": "Comparator",
+        "value": "LM393 (as listed)"
       },
       {
-        "label": "Board model",
-        "value": "Confirm exact model with supplier"
+        "label": "Adjustment",
+        "value": "Sensitivity trimmer"
       }
     ],
     "goodFor": [
@@ -684,7 +684,7 @@
       "audio-reactive builds"
     ],
     "cardChips": [
-      "Microphone",
+      "LM393",
       "Adjustable"
     ],
     "safetyNote": null,
@@ -824,5 +824,401 @@
     "safetyNote": "Use cells with a suitable charger and protection circuit. Check holder wiring and cell polarity. Never short, puncture, or charge cells unattended.",
     "price": null,
     "id": 58
+  },
+  {
+    "slug": "fs-i6-transmitter",
+    "name": "FS-i6 6-Channel RC Transmitter with Receiver",
+    "category": "Drone & RC Parts",
+    "image": "assets/products/fs-i6-transmitter.jpg",
+    "summary": "A six-channel 2.4 GHz AFHDS radio transmitter shown with its matching receiver for RC aircraft and quadcopter control.",
+    "specs": [
+      {
+        "label": "Channels",
+        "value": "6 (as listed)"
+      },
+      {
+        "label": "Radio",
+        "value": "2.4 GHz AFHDS (as listed)"
+      },
+      {
+        "label": "Included",
+        "value": "Transmitter and receiver, as pictured"
+      }
+    ],
+    "goodFor": [
+      "RC aircraft",
+      "quadcopter control",
+      "wireless control"
+    ],
+    "cardChips": [
+      "6 channels",
+      "2.4 GHz"
+    ],
+    "safetyNote": "Check receiver and transmitter compatibility, antenna placement, and local radio requirements before flight.",
+    "price": null,
+    "id": 59
+  },
+  {
+    "slug": "ct6b-transmitter",
+    "name": "CT6B 6-Channel RC Transmitter with Receiver",
+    "category": "Drone & RC Parts",
+    "image": "assets/products/ct6b-transmitter.jpg",
+    "summary": "A six-channel 2.4 GHz radio control set pictured with transmitter, receiver, and connection accessories for RC aircraft projects.",
+    "specs": [
+      {
+        "label": "Channels",
+        "value": "6 (as listed)"
+      },
+      {
+        "label": "Radio",
+        "value": "2.4 GHz (as listed)"
+      },
+      {
+        "label": "Included",
+        "value": "Transmitter and receiver set, as pictured"
+      }
+    ],
+    "goodFor": [
+      "RC aircraft",
+      "quadcopter control",
+      "radio control experiments"
+    ],
+    "cardChips": [
+      "6 channels",
+      "2.4 GHz"
+    ],
+    "safetyNote": "Verify the exact receiver and transmitter version are compatible before use.",
+    "price": null,
+    "id": 60
+  },
+  {
+    "slug": "mq-3-alcohol-sensor",
+    "name": "MQ-3 Alcohol Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/mq-3-alcohol-sensor.jpg",
+    "summary": "An MQ-3 gas-sensor module intended for alcohol-vapor sensing experiments and educational prototypes.",
+    "specs": [
+      {
+        "label": "Sensor type",
+        "value": "MQ-3 alcohol-vapor sensor (as listed)"
+      },
+      {
+        "label": "Module",
+        "value": "Comparator breakout board, as pictured"
+      },
+      {
+        "label": "Use",
+        "value": "Educational sensing; calibration required"
+      }
+    ],
+    "goodFor": [
+      "alcohol-vapor experiments",
+      "sensor learning",
+      "Arduino prototypes"
+    ],
+    "cardChips": [
+      "MQ-3",
+      "Gas sensor"
+    ],
+    "safetyNote": "This is not a certified breathalyzer or safety instrument. Allow warm-up and calibrate for the specific use.",
+    "price": null,
+    "id": 61
+  },
+  {
+    "slug": "metal-detector-sensor",
+    "name": "Metal Detector Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/metal-detector-sensor.jpg",
+    "summary": "A loop-coil metal detection module for close-range sensing experiments and Arduino-compatible projects.",
+    "specs": [
+      {
+        "label": "Supply voltage",
+        "value": "3–5 V (as listed)"
+      },
+      {
+        "label": "Sensing element",
+        "value": "Loop coil shown"
+      },
+      {
+        "label": "Detection range",
+        "value": "Depends on target and setup"
+      }
+    ],
+    "goodFor": [
+      "metal detection experiments",
+      "proximity projects",
+      "sensor demonstrations"
+    ],
+    "cardChips": [
+      "3–5 V",
+      "Loop coil"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 62
+  },
+  {
+    "slug": "mq-5-gas-sensor",
+    "name": "MQ-5 Gas Sensor",
+    "category": "Sensors",
+    "image": "assets/products/mq-5-gas-sensor.jpg",
+    "summary": "An MQ-5 gas-sensing element listed for LPG, natural gas, methane, hydrogen, and carbon monoxide detection projects.",
+    "specs": [
+      {
+        "label": "Sensor",
+        "value": "MQ-5 (marked on sensor)"
+      },
+      {
+        "label": "Target gases",
+        "value": "LPG and other gases (as listed)"
+      },
+      {
+        "label": "Module board",
+        "value": "Not shown in supplied photo"
+      }
+    ],
+    "goodFor": [
+      "gas-sensing experiments",
+      "air-quality prototypes",
+      "sensor learning"
+    ],
+    "cardChips": [
+      "MQ-5",
+      "Gas sensing"
+    ],
+    "safetyNote": "Not a certified gas alarm. Use a properly rated detector for safety-critical applications.",
+    "price": null,
+    "id": 63
+  },
+  {
+    "slug": "ov7670-camera-module",
+    "name": "OV7670 VGA Camera Module",
+    "category": "Sensors",
+    "image": "assets/products/ov7670-camera-module.jpg",
+    "summary": "An OV7670 camera sensor module for low-resolution image capture and embedded vision experiments.",
+    "specs": [
+      {
+        "label": "Image sensor",
+        "value": "OV7670 (as listed)"
+      },
+      {
+        "label": "Resolution",
+        "value": "VGA, up to 300K pixels (as listed)"
+      },
+      {
+        "label": "Connection",
+        "value": "Parallel pin header shown"
+      }
+    ],
+    "goodFor": [
+      "embedded vision",
+      "camera experiments",
+      "microcontroller projects"
+    ],
+    "cardChips": [
+      "VGA",
+      "OV7670"
+    ],
+    "safetyNote": "Check logic voltage and pin compatibility with your controller before wiring.",
+    "price": null,
+    "id": 64
+  },
+  {
+    "slug": "tilt-sensor-module",
+    "name": "Tilt Sensor Module",
+    "category": "Sensors",
+    "image": "assets/products/tilt-sensor-module.jpg",
+    "summary": "An adjustable tilt or vibration sensing module with a small board and metal sensor element, as pictured.",
+    "specs": [
+      {
+        "label": "Sensor element",
+        "value": "Tilt switch module (as listed)"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Trimmer shown"
+      },
+      {
+        "label": "Output",
+        "value": "Confirm exact module output before wiring"
+      }
+    ],
+    "goodFor": [
+      "tilt alarms",
+      "orientation experiments",
+      "Arduino projects"
+    ],
+    "cardChips": [
+      "Tilt sensing",
+      "Adjustable"
+    ],
+    "safetyNote": null,
+    "price": null,
+    "id": 65
+  },
+  {
+    "slug": "futaba-s3003-servo",
+    "name": "Futaba S3003 Standard Servo",
+    "category": "Motors & Actuators",
+    "image": "assets/products/futaba-s3003-servo.jpg",
+    "summary": "A standard-size Futaba S3003 hobby servo with multi-arm horn and three-wire lead for RC and mechanism projects.",
+    "specs": [
+      {
+        "label": "Model",
+        "value": "S3003 (as marked)"
+      },
+      {
+        "label": "Type",
+        "value": "Standard hobby servo"
+      },
+      {
+        "label": "Connection",
+        "value": "Three-wire servo lead"
+      }
+    ],
+    "goodFor": [
+      "RC models",
+      "robot mechanisms",
+      "steering linkages"
+    ],
+    "cardChips": [
+      "Standard size",
+      "3-wire"
+    ],
+    "safetyNote": "Use a suitable regulated supply; servo current can exceed what a microcontroller board can provide.",
+    "price": null,
+    "id": 66
+  },
+  {
+    "slug": "e18-d80nk-proximity-sensor",
+    "name": "E18-D80NK IR Proximity Sensor",
+    "category": "Sensors",
+    "image": "assets/products/e18-d80nk-proximity-sensor.jpg",
+    "summary": "A cylindrical infrared proximity sensor with cable leads for object detection in robotics and automation prototypes.",
+    "specs": [
+      {
+        "label": "Sensor type",
+        "value": "Infrared proximity (as listed)"
+      },
+      {
+        "label": "Model",
+        "value": "E18-D80NK (as listed)"
+      },
+      {
+        "label": "Range",
+        "value": "Verify the variant and adjustment"
+      }
+    ],
+    "goodFor": [
+      "robot obstacle detection",
+      "object sensing",
+      "automation prototypes"
+    ],
+    "cardChips": [
+      "Infrared",
+      "Adjustable range"
+    ],
+    "safetyNote": "Check the sensor supply and output voltage against your controller input limits.",
+    "price": null,
+    "id": 67
+  },
+  {
+    "slug": "raspberry-pi-4-4gb",
+    "name": "Raspberry Pi 4 Model B (4 GB)",
+    "category": "Boards & Controllers",
+    "image": "assets/products/raspberry-pi-4-4gb.jpg",
+    "summary": "A Raspberry Pi 4 Model B single-board computer with 4 GB RAM for Linux, networking, and maker projects.",
+    "specs": [
+      {
+        "label": "Memory",
+        "value": "4 GB RAM (as listed)"
+      },
+      {
+        "label": "Processor",
+        "value": "Quad-core 64-bit (as listed)"
+      },
+      {
+        "label": "Board",
+        "value": "Raspberry Pi 4 Model B"
+      }
+    ],
+    "goodFor": [
+      "Linux projects",
+      "IoT gateways",
+      "computer vision"
+    ],
+    "cardChips": [
+      "4 GB RAM",
+      "Quad-core"
+    ],
+    "safetyNote": "Use a suitable USB-C power supply and check the board revision and included accessories.",
+    "price": null,
+    "id": 68
+  },
+  {
+    "slug": "0-96-inch-oled",
+    "name": "0.96-Inch OLED Display Module",
+    "category": "Displays",
+    "image": "assets/products/0-96-inch-oled.jpg",
+    "summary": "A compact 0.96-inch OLED display breakout for small status screens and microcontroller interfaces.",
+    "specs": [
+      {
+        "label": "Display size",
+        "value": "0.96 inch (as listed)"
+      },
+      {
+        "label": "Pins shown",
+        "value": "VCC, GND, SCL, SDA"
+      },
+      {
+        "label": "Interface",
+        "value": "I²C-style pinout shown"
+      }
+    ],
+    "goodFor": [
+      "status displays",
+      "sensor readouts",
+      "compact interfaces"
+    ],
+    "cardChips": [
+      "0.96 inch",
+      "I²C pins"
+    ],
+    "safetyNote": "Confirm display voltage and I²C address for the exact module variant.",
+    "price": null,
+    "id": 69
+  },
+  {
+    "slug": "4wd-robot-chassis-kit",
+    "name": "4WD Smart Robot Car Chassis Kit",
+    "category": "Robot Chassis & Wheels",
+    "image": "assets/products/4wd-robot-chassis-kit.jpg",
+    "summary": "A four-wheel-drive robot chassis kit pictured with layered chassis plates, yellow wheels, motors, and speed encoders.",
+    "specs": [
+      {
+        "label": "Drive",
+        "value": "4-wheel drive (as listed)"
+      },
+      {
+        "label": "Included",
+        "value": "Chassis, motors, wheels and encoders, as pictured"
+      },
+      {
+        "label": "Controller",
+        "value": "Not included unless specified"
+      }
+    ],
+    "goodFor": [
+      "robot cars",
+      "encoder experiments",
+      "mobile robotics"
+    ],
+    "cardChips": [
+      "4WD",
+      "Speed encoders"
+    ],
+    "safetyNote": "Check kit contents and motor ratings before selecting a battery or driver.",
+    "price": null,
+    "id": 70
   }
 ]
