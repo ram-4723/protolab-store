@@ -26,12 +26,25 @@ Import `ram-4723/protolab-store` into Vercel (or link this repository to the exi
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_PUBLISHABLE_KEY` | Supabase publishable key (`sb_publishable_...`) |
 | `SUPABASE_SECRET_KEY` | Supabase secret key (`sb_secret_...`); server only |
+| `APP_URL` | Public site origin, e.g. `https://protolab-store.vercel.app` (no trailing slash) |
 
 The API also accepts legacy `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY` variables if your project only shows those older keys. Prefer the publishable/secret pair when available.
 
 Redeploy after adding or changing environment variables. Open the Vercel site and submit a test request, then confirm it appears in `/admin.html` after signing in.
 
-## 3. Optional email replies and notifications
+## 3. Enable Google sign-in
+
+The account page includes Google OAuth, but Supabase needs Google OAuth credentials before the button can authenticate users:
+
+1. In Supabase, open **Authentication → Sign In / Providers → Google** and copy the callback URL shown there. It will look like `https://<project-ref>.supabase.co/auth/v1/callback`.
+2. In Google Cloud Console, create an OAuth client ID for a **Web application**. Add the Supabase callback URL as an **Authorized redirect URI**.
+3. Copy the Google client ID and client secret into Supabase's Google provider settings, enable the provider, and save.
+4. In Supabase, open **Authentication → URL Configuration**. Set the Site URL to `https://protolab-store.vercel.app` and add `https://protolab-store.vercel.app/account.html` to the Redirect URLs allowlist. Add your local development URL too if testing locally, such as `http://localhost:8000/account.html`.
+5. Redeploy if you changed `APP_URL`, then try **Continue with Google** on `/account.html`.
+
+For production email/password sign-up, configure a custom SMTP provider in Supabase **Authentication → SMTP Settings**. Supabase's built-in sender is restricted and intended for testing.
+
+## 4. Optional email replies and notifications
 
 Create a Resend API key and verify a sending domain in Resend. Add these Vercel environment variables, then redeploy:
 
