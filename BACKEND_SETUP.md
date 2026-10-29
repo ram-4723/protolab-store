@@ -23,8 +23,10 @@ Import `ram-4723/protolab-store` into Vercel (or link this repository to the exi
 | Variable | Value |
 | --- | --- |
 | `SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_ANON_KEY` | Supabase anon/publishable key |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service-role/secret key; server only |
+| `SUPABASE_PUBLISHABLE_KEY` | Supabase publishable key (`sb_publishable_...`) |
+| `SUPABASE_SECRET_KEY` | Supabase secret key (`sb_secret_...`); server only |
+
+The API also accepts legacy `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY` variables if your project only shows those older keys. Prefer the publishable/secret pair when available.
 
 Redeploy after adding or changing environment variables. Open the Vercel site and submit a test request, then confirm it appears in `/admin.html` after signing in.
 

@@ -1,7 +1,7 @@
 const env = () => {
   const url = process.env.SUPABASE_URL;
-  const anonKey = process.env.SUPABASE_ANON_KEY;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+  const serviceKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !anonKey || !serviceKey) throw new Error('Backend is not configured yet.');
   return { url: url.replace(/\/$/, ''), anonKey, serviceKey };
 };
@@ -24,7 +24,10 @@ const supabaseFetch = async (path, options = {}) => {
     ...options,
     headers: {
       apikey: serviceKey,
-      Authorization: `Bearer ${serviceKey}`,
+      // The new sb_secret_* key is an API key, not a JWT. Sending it as a
+      // bearer token makes Supabase reject it as an invalid JWT. Legacy
+      // service_role keys are JWTs and still need the Authorization header.
+      ...(serviceKey.startsWith('sb_secret_') ? {} : { Authorization: `Bearer ${serviceKey}` }),
       'Content-Type': 'application/json',
       ...(options.headers || {}),
     },
