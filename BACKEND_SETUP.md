@@ -1,21 +1,22 @@
 # ProtoLab backend setup
 
-The customer request workflow uses Vercel serverless functions, Supabase Auth/Postgres, and optional Resend email. The static GitHub Pages copy cannot run the API functions; deploy this repository to Vercel for the request forms and admin inbox to work.
+ProtoLab uses Vercel serverless functions, Supabase Auth/Postgres, and optional Resend email. The static GitHub Pages copy cannot run API functions; use the Vercel deployment for customer requests, order requests, and the admin panel.
 
 ## 1. Create and prepare Supabase
 
 1. Create a Supabase project and keep its database password somewhere safe.
 2. Open **SQL Editor** in the Supabase dashboard and run `supabase/migrations/20261029000100_customer_requests.sql`.
 3. Run `supabase/migrations/20261029000200_customer_accounts.sql` to link requests to optional customer accounts and add customer-facing replies.
-4. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
-5. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
+4. Run `supabase/migrations/20261030000100_store_orders.sql` to create the private store-order table.
+5. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
+6. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
 
    ```sql
    insert into public.admin_users (id)
    values ('00000000-0000-0000-0000-000000000000');
    ```
 
-6. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
+7. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
 
 ## 2. Deploy with Vercel
 
@@ -62,6 +63,7 @@ Without Resend, requests are still saved and manageable in the admin inbox. “S
 - `/account.html` lets customers create an account or sign in, then see their submitted requests, estimates, statuses, and customer-facing messages.
 - `/admin.html` uses Supabase password authentication and only permits users listed in `admin_users`.
 - Admins can search/filter requests, move them through statuses, set cost/build-time estimates, send customer-facing updates, add private notes, and email estimates when email is configured.
+- Checkout requires a signed-in customer, verifies each product and price on the server, and stores an order snapshot in `store_orders`. Customers can see their order status and tracking number on `/account.html`; admins can manage status, payment state, tracking, and customer email updates in `/admin.html`.
 - Database browser roles (`anon` and `authenticated`) have no table access. Server API functions use the private service-role key.
 
-This is the request/estimate workflow; online payments, shipping integrations, and inventory management are not configured by these files.
+Order requests do not charge customers. Admins confirm stock, delivery cost, and payment instructions manually. Online payment processing, automated shipping labels, and stock reservation are not configured yet. Keep the storefront's priced products aligned with `data/components.json`; the server uses that file as the price authority.
