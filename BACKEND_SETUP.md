@@ -9,8 +9,9 @@ ProtoLab uses Vercel serverless functions, Supabase Auth/Postgres, and optional 
 3. Run `supabase/migrations/20261029000200_customer_accounts.sql` to link requests to optional customer accounts and add customer-facing replies.
 4. Run `supabase/migrations/20261030000100_store_orders.sql` to create the private store-order table.
 5. Run `supabase/migrations/20261030000200_inventory_and_order_safety.sql` to add admin-managed inventory and transactional stock reservation/release for orders.
-6. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
-7. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
+6. Run `supabase/migrations/20261031000100_idempotent_submissions.sql` to make form retries safe against duplicate requests, duplicate orders, and duplicate stock reservations.
+7. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
+8. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
 
    ```sql
    insert into public.admin_users (id)

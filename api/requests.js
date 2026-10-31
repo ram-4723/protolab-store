@@ -2,6 +2,7 @@ const { env, json, readJson, supabaseFetch, authenticateUser, sendEmail } = requ
 
 const clean = (value, max) => String(value || '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return json(res, 405, { error: 'Method not allowed.' });
@@ -15,6 +16,8 @@ module.exports = async function handler(req, res) {
     }
     const body = readJson(req);
     if (clean(body.website, 200)) return json(res, 200, { ok: true, message: 'Thanks, your request has been received.' });
+    const idempotencyKey = String(req.headers['idempotency-key'] || '');
+    if (!uuidPattern.test(idempotencyKey)) return json(res, 400, { error: 'Refresh the form and submit your request again.' });
 
     const requestType = body.requestType === 'part' ? 'part' : body.requestType === 'project' ? 'project' : null;
     const customerName = clean(body.name, 100);
@@ -31,15 +34,22 @@ module.exports = async function handler(req, res) {
       return json(res, 400, { error: 'Use the same email address as your signed-in account so this request appears in your account.' });
     }
 
-    const saved = await supabaseFetch('/rest/v1/customer_requests', {
-      method: 'POST',
-      headers: {
-        Prefer: 'return=representation',
-      },
-      body: JSON.stringify({ request_type: requestType, customer_name: customerName, customer_email: customerEmail, customer_user_id: customer?.id || null, description }),
-    });
-    const [record] = saved;
-    if (process.env.ADMIN_NOTIFICATION_EMAIL) {
+    let submission;
+    try {
+      submission = await supabaseFetch('/rest/v1/rpc/create_customer_request', {
+        method: 'POST',
+        body: JSON.stringify({
+          p_request_type: requestType, p_customer_name: customerName, p_customer_email: customerEmail,
+          p_description: description, p_customer_user_id: customer?.id || null, p_idempotency_key: idempotencyKey,
+        }),
+      });
+    } catch (error) {
+      const dbMessage = String(error.detail?.message || error.detail?.details || '');
+      if (dbMessage.includes('IDEMPOTENCY_KEY_REUSED')) return json(res, 409, { error: 'This form changed during submission. Please submit the updated request again.' });
+      throw error;
+    }
+    const record = submission.request;
+    if (submission.created && process.env.ADMIN_NOTIFICATION_EMAIL) {
       try {
         await sendEmail({
           to: process.env.ADMIN_NOTIFICATION_EMAIL,
@@ -50,13 +60,13 @@ module.exports = async function handler(req, res) {
     }
     let confirmationEmailSent = false;
     try {
-      confirmationEmailSent = await sendEmail({
+      if (submission.created) confirmationEmailSent = await sendEmail({
         to: customerEmail,
         subject: `We received your ProtoLab ${requestType} request`,
         text: `Hi ${customerName},\n\nThanks for contacting ProtoLab. We received your ${requestType} request and our team will review it. We’ll follow up with any questions and, for build requests, an estimated cost and build time.\n\nYour request:\n${description}\n\n${customer ? 'You can follow its status in your ProtoLab account.\n\n' : ''}Request reference: ${record.id}\n\nProtoLab`,
       });
     } catch (error) { console.error('Customer request confirmation failed:', error.message); }
-    return json(res, 201, {
+    return json(res, submission.created ? 201 : 200, {
       ok: true,
       message: 'Thanks, your request has been received. We’ll review it and reply with an estimate.',
       id: record.id,

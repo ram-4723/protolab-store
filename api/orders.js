@@ -3,6 +3,7 @@ const catalog = require('../data/components.json');
 
 const clean = (value, max) => String(value ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return json(res, 405, { error: 'Method not allowed.' });
@@ -15,6 +16,8 @@ module.exports = async function handler(req, res) {
     }
     const user = await authenticateUser(req);
     if (!user) return json(res, 401, { error: 'Sign in to submit an order request.' });
+    const idempotencyKey = String(req.headers['idempotency-key'] || '');
+    if (!uuidPattern.test(idempotencyKey)) return json(res, 400, { error: 'Refresh the checkout and submit again.' });
     const body = readJson(req);
     const customerName = clean(body.name, 100);
     const customerEmail = clean(body.email, 254).toLowerCase();
@@ -45,21 +48,24 @@ module.exports = async function handler(req, res) {
 
     let order;
     try {
-      order = await supabaseFetch('/rest/v1/rpc/create_store_order', {
+      const result = await supabaseFetch('/rest/v1/rpc/create_store_order', {
         method: 'POST',
         body: JSON.stringify({
           p_customer_user_id: user.id, p_customer_name: customerName, p_customer_email: customerEmail,
           p_customer_phone: customerPhone, p_shipping_address: shippingAddress, p_customer_note: customerNote,
-          p_items: items, p_subtotal_inr: subtotal,
+          p_items: items, p_subtotal_inr: subtotal, p_idempotency_key: idempotencyKey,
         }),
       });
+      order = result.order;
+      order.created = result.created;
     } catch (error) {
       const dbMessage = String(error.detail?.message || error.detail?.details || '');
       if (dbMessage.includes('INSUFFICIENT_STOCK')) return json(res, 409, { error: 'One or more items no longer have enough stock. Refresh the catalog and update your cart.' });
       if (dbMessage.includes('PRODUCT_UNAVAILABLE')) return json(res, 409, { error: 'One or more items are currently unavailable. Refresh the catalog and update your cart.' });
+      if (dbMessage.includes('IDEMPOTENCY_KEY_REUSED')) return json(res, 409, { error: 'Your checkout changed during submission. Refresh checkout and submit the updated order again.' });
       throw error;
     }
-    if (process.env.ADMIN_NOTIFICATION_EMAIL) {
+    if (order.created && process.env.ADMIN_NOTIFICATION_EMAIL) {
       try {
         await sendEmail({
           to: process.env.ADMIN_NOTIFICATION_EMAIL,
@@ -70,13 +76,15 @@ module.exports = async function handler(req, res) {
     }
     let confirmationEmailSent = false;
     try {
-      confirmationEmailSent = await sendEmail({
+      if (order.created) confirmationEmailSent = await sendEmail({
         to: customerEmail,
         subject: `We received your ProtoLab order request PL-${order.id.slice(0, 8).toUpperCase()}`,
         text: `Hi ${customerName},\n\nWe received your ProtoLab order request. This is not a payment confirmation; our team will review stock and delivery details and contact you before asking you to pay.\n\nOrder: PL-${order.id.slice(0, 8).toUpperCase()}\n\nItems:\n${items.map(item => `${item.quantity} × ${item.name} — ₹${item.line_total_inr}`).join('\n')}\n\nSubtotal: ₹${subtotal}\nDelivery address:\n${shippingAddress}\n\n${customerNote ? `Your note: ${customerNote}\n\n` : ''}You can follow the request in your ProtoLab account.\n\nProtoLab`,
       });
     } catch (error) { console.error('Customer order confirmation failed:', error.message); }
-    return json(res, 201, {
+    const created = order.created;
+    delete order.created;
+    return json(res, created ? 201 : 200, {
       ok: true,
       order: { ...order, order_number: `PL-${order.id.slice(0, 8).toUpperCase()}` },
       confirmationEmailSent,
