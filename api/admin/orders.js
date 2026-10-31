@@ -26,8 +26,18 @@ module.exports = async function handler(req, res) {
     }
     if (body.trackingNumber !== undefined) update.tracking_number = clean(body.trackingNumber, 120) || null;
     if (body.adminNote !== undefined) update.admin_note = clean(body.adminNote, 3000) || null;
-    const [order] = await supabaseFetch(`/rest/v1/store_orders?id=eq.${encodeURIComponent(id)}&select=*`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body: JSON.stringify(update) });
-    if (!order) return json(res, 404, { error: 'Order not found.' });
+    let order;
+    try {
+      order = await supabaseFetch('/rest/v1/rpc/admin_update_store_order', {
+        method: 'POST',
+        body: JSON.stringify({ p_order_id: id, p_admin_id: admin.id, p_order_update: update }),
+      });
+    } catch (error) {
+      const dbMessage = String(error.detail?.message || error.detail?.details || '');
+      if (dbMessage.includes('ORDER_NOT_FOUND')) return json(res, 404, { error: 'Order not found.' });
+      if (dbMessage.includes('CANCELLED_ORDER_IS_FINAL')) return json(res, 409, { error: 'A cancelled order is final. Create a new order if the customer still wants to buy.' });
+      throw error;
+    }
     let emailSent = false;
     if (body.notifyCustomer === true) {
       try {

@@ -43,10 +43,22 @@ module.exports = async function handler(req, res) {
     const subtotal = items.reduce((sum, item) => sum + item.line_total_inr, 0);
     if (!Number.isSafeInteger(subtotal) || subtotal < 1 || subtotal > 10000000) return json(res, 400, { error: 'The order total is outside the allowed range.' });
 
-    const [order] = await supabaseFetch('/rest/v1/store_orders?select=id,created_at,status,subtotal_inr', {
-      method: 'POST', headers: { Prefer: 'return=representation' },
-      body: JSON.stringify({ customer_user_id: user.id, customer_name: customerName, customer_email: customerEmail, customer_phone: customerPhone, shipping_address: shippingAddress, customer_note: customerNote, items, subtotal_inr: subtotal }),
-    });
+    let order;
+    try {
+      order = await supabaseFetch('/rest/v1/rpc/create_store_order', {
+        method: 'POST',
+        body: JSON.stringify({
+          p_customer_user_id: user.id, p_customer_name: customerName, p_customer_email: customerEmail,
+          p_customer_phone: customerPhone, p_shipping_address: shippingAddress, p_customer_note: customerNote,
+          p_items: items, p_subtotal_inr: subtotal,
+        }),
+      });
+    } catch (error) {
+      const dbMessage = String(error.detail?.message || error.detail?.details || '');
+      if (dbMessage.includes('INSUFFICIENT_STOCK')) return json(res, 409, { error: 'One or more items no longer have enough stock. Refresh the catalog and update your cart.' });
+      if (dbMessage.includes('PRODUCT_UNAVAILABLE')) return json(res, 409, { error: 'One or more items are currently unavailable. Refresh the catalog and update your cart.' });
+      throw error;
+    }
     if (process.env.ADMIN_NOTIFICATION_EMAIL) {
       try {
         await sendEmail({
