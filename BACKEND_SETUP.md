@@ -56,7 +56,7 @@ Create a Resend API key and verify a sending domain in Resend. Add these Vercel 
 | `EMAIL_FROM` | Verified sender, such as `ProtoLab <requests@example.com>` |
 | `ADMIN_NOTIFICATION_EMAIL` | Inbox that should receive new request alerts |
 
-Without Resend, requests are still saved and manageable in the admin inbox. “Save & email estimate” saves the quote; the admin inbox indicates if email was unavailable.
+Without Resend, requests are still saved and manageable in the admin inbox. When Resend is configured, ProtoLab sends customers a receipt for new part/project requests and order requests, and admins can email quotes and order updates. “Save & email estimate” saves the quote; the admin inbox indicates if email was unavailable.
 
 ## Request workflow
 

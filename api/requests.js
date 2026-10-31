@@ -48,7 +48,20 @@ module.exports = async function handler(req, res) {
         });
       } catch (error) { console.error('Admin notification failed:', error.message); }
     }
-    return json(res, 201, { ok: true, message: 'Thanks, your request has been received. We’ll review it and reply with an estimate.', id: record.id });
+    let confirmationEmailSent = false;
+    try {
+      confirmationEmailSent = await sendEmail({
+        to: customerEmail,
+        subject: `We received your ProtoLab ${requestType} request`,
+        text: `Hi ${customerName},\n\nThanks for contacting ProtoLab. We received your ${requestType} request and our team will review it. We’ll follow up with any questions and, for build requests, an estimated cost and build time.\n\nYour request:\n${description}\n\n${customer ? 'You can follow its status in your ProtoLab account.\n\n' : ''}Request reference: ${record.id}\n\nProtoLab`,
+      });
+    } catch (error) { console.error('Customer request confirmation failed:', error.message); }
+    return json(res, 201, {
+      ok: true,
+      message: 'Thanks, your request has been received. We’ll review it and reply with an estimate.',
+      id: record.id,
+      confirmationEmailSent,
+    });
   } catch (error) {
     console.error('Request submission failed:', error.message);
     return json(res, error.message.startsWith('Backend is not configured') ? 503 : 500, {

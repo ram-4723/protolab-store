@@ -68,7 +68,20 @@ module.exports = async function handler(req, res) {
         });
       } catch (error) { console.error('Admin order notification failed:', error.message); }
     }
-    return json(res, 201, { ok: true, order: { ...order, order_number: `PL-${order.id.slice(0, 8).toUpperCase()}` }, message: 'Order request received. ProtoLab will confirm availability, delivery, and payment details.' });
+    let confirmationEmailSent = false;
+    try {
+      confirmationEmailSent = await sendEmail({
+        to: customerEmail,
+        subject: `We received your ProtoLab order request PL-${order.id.slice(0, 8).toUpperCase()}`,
+        text: `Hi ${customerName},\n\nWe received your ProtoLab order request. This is not a payment confirmation; our team will review stock and delivery details and contact you before asking you to pay.\n\nOrder: PL-${order.id.slice(0, 8).toUpperCase()}\n\nItems:\n${items.map(item => `${item.quantity} × ${item.name} — ₹${item.line_total_inr}`).join('\n')}\n\nSubtotal: ₹${subtotal}\nDelivery address:\n${shippingAddress}\n\n${customerNote ? `Your note: ${customerNote}\n\n` : ''}You can follow the request in your ProtoLab account.\n\nProtoLab`,
+      });
+    } catch (error) { console.error('Customer order confirmation failed:', error.message); }
+    return json(res, 201, {
+      ok: true,
+      order: { ...order, order_number: `PL-${order.id.slice(0, 8).toUpperCase()}` },
+      confirmationEmailSent,
+      message: 'Order request received. ProtoLab will confirm availability, delivery, and payment details.',
+    });
   } catch (error) {
     console.error('Order request failed:', error.message);
     return json(res, error.message.startsWith('Backend is not configured') ? 503 : 500, { error: error.message.startsWith('Backend is not configured') ? error.message : 'Could not submit your order request. Please try again.' });
