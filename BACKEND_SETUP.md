@@ -10,15 +10,16 @@ ProtoLab uses Vercel serverless functions, Supabase Auth/Postgres, and optional 
 4. Run `supabase/migrations/20261030000100_store_orders.sql` to create the private store-order table.
 5. Run `supabase/migrations/20261030000200_inventory_and_order_safety.sql` to add admin-managed inventory and transactional stock reservation/release for orders.
 6. Run `supabase/migrations/20261031000100_idempotent_submissions.sql` to make form retries safe against duplicate requests, duplicate orders, and duplicate stock reservations.
-7. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
-8. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
+7. Run `supabase/migrations/20261031000200_order_activity_history.sql` to create an order timeline for placement, status, payment, and tracking changes.
+8. In **Authentication → Users**, create the admin account you will use to sign in at `/admin.html`.
+9. Copy that user's UUID, then run the following in SQL Editor, replacing the UUID:
 
    ```sql
    insert into public.admin_users (id)
    values ('00000000-0000-0000-0000-000000000000');
    ```
 
-8. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
+9. From **Project Settings → API**, copy the project URL, anon/publishable key, and service-role/secret key. The service-role key is private and must only be added to Vercel server environment variables.
 
 ## 2. Deploy with Vercel
 
@@ -65,7 +66,7 @@ Without Resend, requests are still saved and manageable in the admin inbox. When
 - `/account.html` lets customers create an account or sign in, then see their submitted requests, estimates, statuses, and customer-facing messages.
 - `/admin.html` uses Supabase password authentication and only permits users listed in `admin_users`.
 - Admins can search/filter requests, move them through statuses, set cost/build-time estimates, send customer-facing updates, add private notes, and email estimates when email is configured.
-- Checkout requires a signed-in customer, verifies each product and price on the server, and stores an order snapshot in `store_orders`. Tracked stock is reserved atomically with order creation; cancellation returns reserved units. Customers can see their order status and tracking number on `/account.html`; admins can manage status, manual payment state, tracking, customer email updates, and inventory in `/admin.html`.
+- Checkout requires a signed-in customer, verifies each product and price on the server, and stores an order snapshot in `store_orders`. Tracked stock is reserved atomically with order creation; cancellation returns reserved units. Customers can see their order status, tracking number, and activity timeline on `/account.html`; admins can manage status, manual payment state, tracking, customer email updates, and inventory in `/admin.html`.
 - In the admin panel's **Inventory** section, enter available units and a low-stock threshold. A blank quantity means stock is not tracked for that item; zero means unavailable. Manually mark products unavailable when you stop accepting orders for them.
 - Database browser roles (`anon` and `authenticated`) have no table access. Server API functions use the private service-role key.
 
