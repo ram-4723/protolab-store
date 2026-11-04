@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f5f3ed" />
   <title>ProtoLab — Components</title>
+  <meta name="description" content="Browse ProtoLab electronics components, compare practical specifications, and find parts for Arduino, IoT, robotics, and engineering projects.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -94,6 +95,7 @@ body{font-size:16px}
 @media(max-width:620px){.nav .brand{order:1;margin-right:auto}.nav .nav-actions{order:2;margin-left:auto}.nav .menu-btn{order:3;margin-left:12px;min-width:40px;min-height:40px;display:grid;place-items:center}.nav .nav-links{order:4}}
 </style>
 <style>.stock-hint{margin:7px 0 0;color:#55724c;font:11px "DM Mono",monospace}.stock-hint.limited{color:#9a5b20}.stock-hint.unavailable{color:#a63732;font-weight:700}.add-btn:disabled{opacity:.48;cursor:not-allowed}</style>
+  <link rel="stylesheet" href="assets/site-polish.css">
 </head>
 <body>
   <div class="announcement">Free shipping on orders over ₹1,499 <b>·</b> Built for curious minds</div>
@@ -139,7 +141,6 @@ body{font-size:16px}
     document.getElementById('modalAdd').onclick=()=>{if(activeProduct&&activeProduct.price!==null)addToCart(activeProduct.id);document.getElementById('modal').classList.remove('open')};document.getElementById('modalClose').onclick=()=>document.getElementById('modal').classList.remove('open');document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('open')};
     const projectGrid=document.getElementById('projectGrid');if(projectGrid)projectGrid.addEventListener('click',e=>{const b=e.target.closest('[data-component-slug]');if(b)openComponentBySlug(b.dataset.componentSlug)});
     document.getElementById('cartBtn').onclick=()=>document.getElementById('cartPanel').classList.add('open');document.getElementById('cartClose').onclick=()=>document.getElementById('cartPanel').classList.remove('open');document.getElementById('checkout').onclick=()=>notify('Checkout is coming soon — your cart is saved here.');document.getElementById('menuBtn').onclick=()=>document.getElementById('navLinks').classList.toggle('open');document.querySelectorAll('#navLinks a').forEach(a=>a.onclick=()=>document.getElementById('navLinks').classList.remove('open'));
-    document.getElementById('searchBtn').onclick=()=>{const query=prompt('Search components by name or type:');if(query===null)return;const q=query.trim().toLowerCase();const match=products.find(p=>(p.name+' '+p.category+' '+p.summary+' '+(p.goodFor||[]).join(' ')).toLowerCase().includes(q));if(match){if(!grid){location.href='components.html#component-'+encodeURIComponent(match.slug);return}activeFilter='All';renderCatalog();document.getElementById('products').scrollIntoView({behavior:'smooth'});setTimeout(()=>openProduct(match.id),350)}else notify(q?'No matching components yet.':'Type a component name to search.')};
     const heroCopy=document.querySelector('.hero-copy');
     const heroMessage=document.getElementById('heroMessage');
     const heroMessages=[
@@ -161,5 +162,6 @@ body{font-size:16px}
     },3500)};
     renderCatalog();if(projectGrid)renderProjectKits();renderCart();refreshStock();if(grid&&location.hash.startsWith("#component-")){const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(target)setTimeout(()=>target.scrollIntoView({behavior:"smooth",block:"center"}),80)}
   </script>
+  <script src="assets/site-search.js" defer></script>
 </body>
 </html>
